@@ -1,0 +1,26 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ActionSheet
+    title="{i18n>xtit.alsoFindVia}"
+    showCancelButton="true"
+    placement="Bottom">
+		<buttons id="pmNotifButtonExtension">
+		    <!--Extension Point to add/remove search options for the technical object within the ActionSheet-->
+			<core:ExtensionPoint name="extButtonSearchOptions">
+				<!-- Button to search via Barcode -->
+				<Button 
+					id="pmNotifButtonBarcodeSearch"
+				    text="{i18n>xbut.barcode}" 
+				    press="onSearchViaBarcode" 
+				    enabled="{appProperties>/hasScanner}" 
+				    icon="sap-icon://bar-code" />
+			</core:ExtensionPoint>
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

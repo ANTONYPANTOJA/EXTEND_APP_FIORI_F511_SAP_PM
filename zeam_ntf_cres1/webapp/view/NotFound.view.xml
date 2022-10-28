@@ -1,0 +1,20 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View
+	controllerName="i2d.eam.pmnotification.create.zeamntfcres1.controller.BaseController"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    
+	<MessagePage
+		title="{i18n>xtit.notFoundTitle}"
+		text="{i18n>ymsg.notFoundText}"
+		icon="{sap-icon://document}"
+		description="">
+		<customDescription>
+			<Link text="{i18n>xbut.back}" press="navBack" />
+		</customDescription>
+	</MessagePage>
+</mvc:View>

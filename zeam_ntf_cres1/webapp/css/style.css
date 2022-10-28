@@ -1,0 +1,20 @@
+/* Enter your custom styles here */
+.sapUiMedia-Std-Desktop .finCentralListreportReuse .sapFioriListReportSmartTable {
+    padding: 1rem 2rem
+}
+
+.sapUiMedia-Std-Tablet .finCentralListreportReuse .sapFioriListReportSmartTable {
+    padding: 1rem
+}
+
+.sapUiMedia-Std-Phone .finCentralListreportReuse .sapFioriListReportSmartTable {
+    padding: 1rem 0
+}
+
+.finCentralListreportReuse .sapFioriListReportPageOverflow .sapMPageScroll {
+    overflow: auto
+}
+
+.finCentralListreportReuse .sapUiTableCtrlEmptyMsg {
+    font-size: 1rem
+}

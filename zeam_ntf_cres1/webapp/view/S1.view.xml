@@ -1,0 +1,61 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<!-- " -->
+<mvc:View controllerName="i2d.eam.pmnotification.create.zeamntfcres1.controller.S1"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:footerbar="sap.ushell.ui.footerbar"
+    xmlns:semantic="sap.m.semantic"
+	xmlns:ushell="sap.ushell.ui">
+    <semantic:FullscreenPage id="pmNotifFullScreenPageS1" navButtonPress="onNavBack"
+          title="{i18n>FULLSCREEN_TITLE}" 
+          showNavButton="true"
+          busy="{appProperties>/busy}"
+		  busyIndicatorDelay="{appProperties>/delay}">
+        <semantic:content>
+            <!-- View create notification-->
+            <mvc:XMLView 
+                width="100%" 
+                class="createView" 
+                viewName="i2d.eam.pmnotification.create.zeamntfcres1.view.subview.MaintainNotification" 
+                id="pmNotifViewCreateNotification"
+                async="true" />
+        </semantic:content>
+        
+        <semantic:messagesIndicator>
+			<semantic:MessagesIndicator id="pmNotifCreateNotificationMessagesIndicator" press="onMessageButtonPressed"/>
+		</semantic:messagesIndicator>
+
+		<semantic:mainAction>
+			<semantic:MainAction press="onSave" text="{i18n>xbut.submit}"/>
+		</semantic:mainAction>
+		
+		<semantic:customFooterContent>
+			<!-- Cancel Button -->
+            <Button
+            	id="pmNotifButtonCancel"
+            	press="onCancel" 
+            	text="{i18n>xbut.cancel}" 
+            	visible="{= !${appProperties>/isStartupCreate}}"/>
+        	<!-- Notification list Button -->
+            <Button
+            	id="pmNotifButtonMyNotifications"
+            	press="onMyNotifications" 
+            	text="{i18n>xbut.myNotifications}"/>  
+		</semantic:customFooterContent>   
+					
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:saveAsTileAction>
+			<!-- Button for Share Tile -->
+			<footerbar:AddBookmarkButton id="pmNotifButtonShareTile" enabled="false"/>
+		</semantic:saveAsTileAction>		
+	</semantic:FullscreenPage>
+</mvc:View>

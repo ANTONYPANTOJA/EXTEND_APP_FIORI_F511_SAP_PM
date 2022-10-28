@@ -1,0 +1,12 @@
+<mvc:View controllerName="i2d.eam.pmnotification.create.zeamntfcres1.controller.App"
+          xmlns:mvc="sap.ui.core.mvc" 
+          displayBlock="true"
+          xmlns="sap.m"
+          height="100%">
+          
+       <App id="fioriContent"
+		    busy="{appProperties>/busy}"
+		    busyIndicatorDelay="{appProperties>/delay}">
+        </App>
+        
+</mvc:View>

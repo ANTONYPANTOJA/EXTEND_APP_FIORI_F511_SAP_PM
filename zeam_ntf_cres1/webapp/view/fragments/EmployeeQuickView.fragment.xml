@@ -1,0 +1,37 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <QuickView placement="Auto">
+    <QuickViewPage
+        header="{i18n>xtit.contactInfo}"
+        title="{FullName}"
+        icon="sap-icon://person-placeholder"
+        description="{UserID}">
+      <QuickViewGroup heading="{i18n>xtit.contactDetails}">
+        <QuickViewGroupElement 
+            label="{/#PMUserDetails/TelephoneNumber/@sap:label}" 
+            value="{TelephoneNumber}"
+            type="{elementType>/phone}"/>
+        <QuickViewGroupElement 
+            label="{/#PMUserDetails/MobileNumber/@sap:label}" 
+            value="{MobileNumber}"
+            type="{elementType>/mobile}"/>            
+        <QuickViewGroupElement 
+            label="{/#PMUserDetails/Email/@sap:label}" 
+            value="{Email}"
+            type="{elementType>/email}"/>
+      </QuickViewGroup>
+      <QuickViewGroup heading="{i18n>xtit.companyDetails}">
+        <QuickViewGroupElement 
+            label="{/#PMUserDetails/Company/@sap:label}" 
+            value="{Company}"/> 
+        <QuickViewGroupElement 
+            label="{/#PMUserDetails/Department/@sap:label}" 
+            value="{Department}"/>             
+      </QuickViewGroup>
+    </QuickViewPage>
+  </QuickView>
+</core:FragmentDefinition>
