@@ -1,0 +1,282 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.eam.pmnotification.create.s1.controller.MaintainNotification"
+	xmlns="sap.m"
+	xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:eam="sap.i2d.eam.lib.pmnotification.s1.controls"
+	xmlns:util="i2d.eam.pmnotification.create.s1.util"
+	xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+ 
+	
+	<layout:VerticalLayout width="100%" class="sapUiResponsiveContentPadding">
+		<layout:content>
+			<form:SimpleForm    id="pmNotifSimpleFormMaintenanceRequest"
+								editable="true" 
+			                    layout="ResponsiveGridLayout" 
+                                labelSpanL="1" 
+                                labelSpanM="3" 
+                                columnsL="1" 
+                                columnsM="1" 
+                                emptySpanL="1" 
+                                emptySpanM="0"  
+                                width="100%" 
+                                title="{i18n>xtit.request}"
+                                maxContainerCols="1">
+				<form:content>
+        			<!--Extension Point to enhance the UI at the beginning of the form in create and edit-->
+        			<core:ExtensionPoint name="extBeginForm" />      				
+				
+					<Label id="pmNotifLabelTechnicalObject" text="{/#NotificationHeader/TechnicalObjectNumber/@sap:label}" labelFor="pmNotifInputTechnicalObject"></Label>
+					<layout:VerticalLayout id="pmNotifVerticalLayoutInputTechnicalObject" class="sapUiNoContentPadding">
+						<layout:content>
+						
+						<!-- ==== TechnicalObject Input ==== -->
+						    <!-- Input field for the technical object in create/edit -->
+							<eam:TechnicalObjectInput id="pmNotifInputTechnicalObject" 
+                                        objectNumber="{TechnicalObjectNumber}"
+                                        objectType="{TechnicalObjectType}"
+                                        objectNumberWithLeadingZeros="{TecObjNoLeadingZeros}"
+                                        objectDescription="{TechnicalObjectDescription}"
+                                        technicalObjectChange="onTechnicalObjectChange"
+                                        technicalObjectInvalid="onTechnicalObjectInvalidated"
+                                        class="sapUiNoContentPadding">
+								<eam:valueHelp>
+									<eam:EAMValueHelp id="pmNotifValueHelpTechnicalObject"
+                                                    entitySet="TechnicalObjectSet"
+                                                    title="{i18n>xtit.selectTechnicalObject}"
+                                                    searchPlaceholder="{i18n>ymsg.searchForTechnicalObjects}"
+                                                    resultTableHeader="{i18n>xtit.technicalObjects}"
+                                                    defaultSelectionFields="TechnicalObjectType,TechnicalObjectNumber,TecObjNoLeadingZeros"
+                                                    ignoredFields="TechnicalObjectType,TecObjNoLeadingZeros,TechnicalObjectForSearch,TechnicalObjectLabelForSearch"
+                                                    facetFilterSet="TOFacetFilterSet"
+                                                    facetFilterItemSet="TOFacetFilterItemSet"
+                                                    defaultActiveFacetFilterLists="Manufacturer,ModelNumber"
+                                                    persistencyKey="EAMTechnicalObjectVH"/>
+								</eam:valueHelp>
+							</eam:TechnicalObjectInput>
+
+    	                    <!-- ==== Links: Overview / Count of Notifications ==== -->	
+        					<mvc:XMLView 
+        					    visible="{path: 'viewProperties>/techObjectValid', formatter: '.formatter.checkForValidValue'}"
+        					    width="100%" 
+                                displayBlock="true" 
+                                viewName="i2d.eam.pmnotification.create.s1.view.subview.LinksForTechnicalObject"
+                                async="true"
+                                />
+						</layout:content>
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+				
+					<!-- ==== Link Also Find via ==== -->
+                	<layout:FixFlex class="fixFlexHorizontal" vertical="false" visible="{path: 'viewProperties>/alsoFindViaOn', formatter: '.formatter.checkForValidValue'}">
+                		<layout:fixContent>
+        					<Link text="{i18n>xlnk.alsoFindVia}" press="onAlsoFindVia" />
+                		</layout:fixContent>
+                	</layout:FixFlex>					
+					
+					<!-- ==== Notification Types ==== -->
+					<!--Extension Point to enhance the choice of notification types in create and edit-->
+					<core:ExtensionPoint name="extNotificationType">
+						<Label id="pmNotifLabelNotificationType" text="{/#NotificationHeader/NotificationType/@sap:label}" required="true" labelFor="pmNotifComboBoxNotificationType"></Label>
+						<!-- ComboBox for Notification Types-->
+    					<ComboBox
+    					    id="pmNotifComboBoxNotificationType"
+    						selectionChange="onNotificationTypeChange"
+    						selectedKey="{NotificationType}"
+    						placeholder="{i18n>ymsg.selMalfunction}">
+    						<!--<core:Item key="{Type}" text="{= ${Type} + ' (' + ${Description} + ')'}"/>-->
+    						<layoutData>
+    							<layout:GridData span="L7 M7 S12" />
+    						</layoutData>						
+    					</ComboBox>															
+					</core:ExtensionPoint>
+					
+					<!-- ==== Shorttext / Title ==== -->
+					<Label id="pmNotifLabelTitle" text="{/#NotificationHeader/ShortText/@sap:label}" required="true" labelFor="pmNotifInputTitle"></Label>
+					<!-- Input field for Shorttext / Title in create/edit-->
+					<Input id="pmNotifInputTitle" 
+					        placeholder="{i18n>ymsg.title}" 
+					        value="{ShortText}"
+					        maxLength="40"
+					        change="onInputChange">
+						<layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layoutData>
+					</Input>
+					
+					<!-- ==== Link: Use Templates ==== -->
+                	<layout:FixFlex class="fixFlexHorizontal" vertical="false">
+                		<layout:fixContent>
+        					<Link visible="{path: 'viewProperties>/hasTemplates', formatter: '.formatter.checkForValidValue'}" text="{i18n>xlnk.useTemplates}" press="onUseTemplates" />
+                		</layout:fixContent>
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" indent="L3 M3"/>
+						</layout:layoutData>                		
+                	</layout:FixFlex>
+
+					<!-- === TextAreas: (History and Update) for Longtext/Description in Create === -->
+                    <Label id="pmNotifLabelLongText" text="{/#LongText/UpdateText/@sap:label}" labelFor="pmNotifLongTextCreate"></Label>
+                    <!-- TextAreas for Longtext/Description in Create -->
+					<layout:VerticalLayout
+							id="pmNotifLongTextCreate" 
+							visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}">
+						<util:ExpandableTextArea change="onInputChange" placeholder="{i18n>ymsg.addDetails}" rows="5"
+							value="{UpdateText}" wrapping="None" width="100%"></util:ExpandableTextArea>
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12"/>
+						</layout:layoutData>
+					</layout:VerticalLayout>
+					
+					<!-- TextAreas: (History and Update) for Longtext/Description in Edit -->
+					<layout:VerticalLayout
+							id="pmNotifLongTextEdit"
+							visible="{= typeof ${appProperties>/isCreateMode} !== 'undefined' &amp;&amp; !${appProperties>/isCreateMode}}">
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12"/>
+						</layout:layoutData>
+					</layout:VerticalLayout>
+					
+                    <!-- ==== Location ==== -->
+					<Label id="pmNotifLabelLocation" text="{/#NotificationHeader/Location/@sap:label}" labelFor="pmNotifInputLocation"/>
+                        <layout:VerticalLayout id="pmNotifVerticalLayoutLocation">
+    						<layout:content>
+    						
+            					<Input  id="pmNotifInputLocation"
+            							placeholder="{i18n>ymsg.physLoc}" 
+            					        value="{Location}"
+            					        maxLength="50"
+            					        change="onInputChange">
+            					</Input>
+    					
+                				<!--Extension Point for additonal locationdata in display in create and edit-->
+                                <core:ExtensionPoint name="extAdditionalLocationData">
+                                     <!--   Example implementation for map integration 
+                                            Remark:via custom data attribute "cd:locationPropertyInContext" the property 
+                                            can be set, where the GPS-coordinates shall be retrieved from respectively written to
+                                            This property has to be available in the NotificationHeader-->
+            
+                						    <!-- Map-View -->
+                							<!--<mvc:XMLView -->
+                       <!--                     	busy="{appProperties>/busy}"-->
+                       <!--                     	busyIndicatorDelay="{appProperties>/delay}"-->
+                       <!--                         width="100%" -->
+                       <!--                         displayBlock="true" -->
+                       <!--                         viewName="i2d.eam.pmnotification.create.s1.view.subview.GeoMap" -->
+                       <!--                         id="pmNotifViewMaintainNotifGeoMap" -->
+                       <!--                         visible="{path: 'appProperties>/hasGPS', formatter: '.formatter.checkForValidValue'}"-->
+                       <!--                         cd:locationPropertyInContext="Location"/>-->
+                				</core:ExtensionPoint>	
+						    </layout:content>
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+					
+					<!-- ==== Effect ==== -->
+					<Label id="pmNotifLabelEffect" text="{/#NotificationHeader/Effect/@sap:label}" labelFor="pmNotifSelectEffect"></Label>
+					<!-- Effect Field -->
+					<Select 
+					    id="pmNotifSelectEffect"
+						change="onInputChange"
+						selectedKey="{Effect}"
+						forceSelection="false">
+						<layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layoutData>						
+					</Select>					
+
+					<!-- ==== Date/Time ==== -->
+					<Label id="pmNotifLabelDateTime" text="{/#NotificationHeader/NotificationTimestamp/@sap:label}"
+					        visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" labelFor="pmNotifInputDateTime"></Label>
+		    		<DateTimePicker 
+		    			id="pmNotifInputDateTime"
+						placeholder="{i18n>ymsg.datetime}" 
+			            change="onTimePickerInputChange"
+			            visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+			            value="{path:'NotificationTimestamp', type:'sap.ui.model.type.DateTime', formatOptions: { style: 'short'}}">
+ 						<layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layoutData>
+					</DateTimePicker>
+                    <!-- ==== Reported by ==== -->
+					<Label id="pmNotifLabelReportedBy" text="{/#NotificationHeader/Reporter/@sap:label}" required="true"
+					    visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" labelFor="pmNotifInputReporter"></Label>
+					<layout:VerticalLayout
+						id="pmNotifVerticalLayoutInputReporter"
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}">
+						<layout:content>
+						    <!-- Input field for the Reporter in create/edit -->
+							<eam:SingleKeyInput id="pmNotifInputReporter" 
+                                        entitySet="PMUserDetailsSet"
+                                        showValueHelp="true"
+                                        objectKey="{Reporter}"
+                                        objectKeyField="UserID"
+                                        objectDescription="{ReporterDisplay}"
+                                        objectDescriptionField="FullName"
+                                        objectChange="onReporterChange"
+                                        objectInvalid="onReporterInvalidated"
+                                        forceValidObject="false"
+                                        change="onInputChange"
+                                        visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                        maxLength="12">
+								<eam:valueHelp>
+									<eam:EAMValueHelp 
+									                entitySet="PMUserDetailsSet"
+                                                    title="{i18n>xtit.selectReporter}"
+                                                    searchPlaceholder="{i18n>ymsg.searchForReporter}"
+                                                    resultTableHeader="{i18n>xtit.reporter}"
+                                                    defaultSelectionFields="FullName" 
+                                                    persistencyKey="EAMReporterVH"/>
+								</eam:valueHelp>
+							</eam:SingleKeyInput>
+					        
+						</layout:content>
+						
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+
+					<!-- Notify me label -->
+					<Label 
+						id="pmNotifLabelNotifyMe"
+						visible="false"
+						text="{i18n>xckl.notifyMeOfProgess}" labelFor="pmNotifCheckBoxNotifyMe">
+					</Label>
+					<!-- Notify me -->
+					<CheckBox 
+						id="pmNotifCheckBoxNotifyMe"
+					    selected="{Subscribed}" 
+					    ariaLabelledBy="pmNotifLabelNotifyMe"
+						text="{i18n>xckl.notifyMeOfProgess}"
+					    visible="{path: 'UserCanBeNotified', formatter: '.formatter.checkForValidValue'}"/>
+
+        			<!--Extension Point at the end of the form in create and edit-->
+        			<core:ExtensionPoint name="extEndForm" />      					
+				</form:content>
+			</form:SimpleForm>
+			
+			<!-- ==== Attachments ==== -->
+			<layout:VerticalLayout width="100%">
+				<layout:content>
+				    <!-- Attachments Fragment in edit/create -->
+                    <core:ComponentContainer id="pmNotifContainerAttachments" usage="attachmentReuseComponent" propagateModel="true" />				    
+				</layout:content>
+				<layout:layoutData>
+					<layout:GridData span="L12 M12 S12" />
+				</layout:layoutData>
+			</layout:VerticalLayout>
+			
+		</layout:content>
+	</layout:VerticalLayout>
+</mvc:View>

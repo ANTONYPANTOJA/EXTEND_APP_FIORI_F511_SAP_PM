@@ -1,0 +1,114 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<!-- <core:View -->
+<mvc:View controllerName="i2d.eam.pmnotification.create.s1.controller.S0" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+	xmlns:semantic="sap.m.semantic" xmlns:sl="sap.ui.comp.navpopover" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:ushell="sap.ushell.ui" xmlns="sap.m" xmlns:ushellFooterbar="sap.ushell.ui.footerbar" >
+	<semantic:FullscreenPage id="pmNotifFullScreenPageS0" navButtonPress="onNavBack" showNavButton="true" title="{i18n>xtit.notificationList}">
+		<semantic:content>
+			<!-- Smart Filter Bar -->
+			<smartFilterBar:SmartFilterBar enableBasicSearch="true" entityType="NotificationHeader" expandAdvancedArea="false"
+				id="pmNotifSmartTableFilterWorklist" initialise="onInitSmartFilterBar" persistencyKey="i2d.eam.pmnotification.list.filter"
+				showClearButton="true" showClearOnFB="true" showRestoreOnFB="false">
+				<smartFilterBar:customData>
+					<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"short"\}'/>
+					<core:CustomData key="defaultDropDownDisplayBehaviour" value="idAndDescription"/>
+					<core:CustomData key="defaultTokenDisplayBehaviour" value="idAndDescription"/>
+				</smartFilterBar:customData>
+				<!-- Smart Filter Bar - Control Configuration id="pmNotifSmartFilterBarControlConfiguration"  -->
+				<smartFilterBar:controlConfiguration >
+					<smartFilterBar:ControlConfiguration index="1" key="ReporterDisplay" visibleInAdvancedArea="true"/>
+					<smartFilterBar:ControlConfiguration index="2" key="NotificationDate" visibleInAdvancedArea="true"/>
+					<smartFilterBar:ControlConfiguration index="3" key="PlantSection"
+						visibleInAdvancedArea="true"/>
+					<smartFilterBar:ControlConfiguration index="4" key="Room" visibleInAdvancedArea="true"/>
+					<smartFilterBar:ControlConfiguration controlType="dropDownList" displayBehaviour="descriptionOnly" index="5" key="SystemStatus"
+						preventInitialDataFetchInValueHelpDialog="false" visibleInAdvancedArea="true"/>
+					<!--<smartFilterBar:ControlConfiguration controlType="dropDownList" key="Priority" preventInitialDataFetchInValueHelpDialog="false"/>-->
+					<smartFilterBar:ControlConfiguration controlType="dropDownList" key="Effect" preventInitialDataFetchInValueHelpDialog="false"/>
+					<smartFilterBar:ControlConfiguration controlType="dropDownList" key="NotificationType" preventInitialDataFetchInValueHelpDialog="false"/>
+					<smartFilterBar:ControlConfiguration controlType="dropDownList" displayBehaviour="descriptionOnly" key="DateMonitor"
+						preventInitialDataFetchInValueHelpDialog="false"/>
+				</smartFilterBar:controlConfiguration>
+			</smartFilterBar:SmartFilterBar>
+			<!-- Extension Point for customer enhancements before the worklistlist-->
+			<core:ExtensionPoint name="extBeginPage"/>
+			<!-- Smart Table to display notifications -->
+			<smartTable:SmartTable 
+				beforeRebindTable="onBeforeRebindTable" class="sapUiSmallMarginTop sapUiResponsiveMargin" demandPopin="true"
+				entitySet="NotificationHeaderSet" header="{= ${i18n>xtit.notifications} + '\u00A0'}" id="pmNotifSmartTableWorklist"
+				ignoredFields="AttachmentId,NotificationPhase,LastChangedTimestamp,Reporter,TechnicalObjectType,NotificationTimezone,TecObjNoLeadingZeros"
+				persistencyKey="i2d.eam.pmnotification.list" showRowCount="true" afterVariantApply="onAfterSTVariantApplied" 
+				afterVariantInitialise="onAfterSTVariantInitialised" requestAtLeastFields="NotificationNumber"
+				smartFilterId="pmNotifSmartTableFilterWorklist" tableType="ResponsiveTable" useExportToExcel="true" useTablePersonalisation="true">
+				<smartTable:customData>
+					<core:CustomData key="dateFormatSettings" value='\{"UTC":true,"style":"short"\}'/>
+					<core:CustomData key="p13nDialogSettings" value='{filter:{visible:false}}'/>
+				</smartTable:customData>
+				<smartTable:layoutData>
+					<FlexItemData growFactor="1"/>
+				</smartTable:layoutData>
+				<smartTable:semanticObjectController>
+					<sl:SemanticObjectController beforePopoverOpens="onBeforePopoverOpens" navigate="onNavigate"
+						navigationTargetsObtained="onNavTargetsObtained"/>
+				</smartTable:semanticObjectController>
+				<smartTable:customToolbar>
+					<OverflowToolbar active="false" design="Transparent" enabled="true">
+						<content>
+							<ToolbarSpacer/>
+							<!-- Button for adding notification -->
+							<Button enabled="{= ${viewProperties>/changeAllowed}}" icon="sap-icon://add" id="pmNotifButtonAdd" press="onAddPressed"
+								tooltip="{i18n>xtol.addRequest}" type="Transparent"/>
+						</content>
+					</OverflowToolbar>
+				</smartTable:customToolbar>
+				<Table growing="true" growingScrollToLoad="true">
+					<columns>
+						<!-- Column Date Monitor -->
+						<Column id="pmNotifColumnDateMonitor" width="8em">
+							<Text text="{/#NotificationHeader/DateMonitor/@sap:label}" tooltip="{/#NotificationHeader/DateMonitor/@sap:label}" />
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey": "DateMonitor","leadingProperty": "DateMonitor","sortProperty": "DateMonitor", "columnIndex":"2"}'/>
+							</customData>
+						</Column>
+						<Column id="pmNotifColumnNotificationTime" width="8em" visible="false">
+							<Text text="{/#NotificationHeader/NotificationTime/@sap:label}" tooltip="{/#NotificationHeader/NotificationTime/@sap:label}" />
+							<customData>
+								<core:CustomData key="p13nData"
+									value='\{"columnKey": "NotificationTime","leadingProperty": "NotificationTime","sortProperty": "NotificationTime", "type":"time"}'/>
+							</customData>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem press="onHandleRowPress" type="Navigation">
+							<cells>
+								<core:Icon color="{path: 'DateMonitor', formatter: '.formatter.formatDateMonitorToIconColor'}"
+									src="{path: 'DateMonitor', formatter: '.formatter.formatDateMonitorToIconNoSizeCheck'}"
+									tooltip="{path: 'DateMonitor', formatter: '.formatter.formatDateMonitorTooltip'}"/>
+								<Text text="{path: 'NotificationTimestamp', type: 'sap.ui.model.odata.type.DateTime', formatOptions: { format: 'jms' } }" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</smartTable:SmartTable>
+			<!-- Extension Point for customer enhancements after the worklistlist-->
+			<core:ExtensionPoint name="extEndPage"/>
+		</semantic:content>
+		<semantic:messagesIndicator>
+			<semantic:MessagesIndicator press="onMessageButtonPressed"/>
+		</semantic:messagesIndicator>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:saveAsTileAction>
+			<!-- Button for Share Tile -->
+			<ushellFooterbar:AddBookmarkButton customUrl="{share>/bookmarkCustomUrl}" id="pmNotifButtonShareTile" tileIcon="{share>/bookmarkIcon}"
+				title="{share>/bookmarkTitle}"/>
+		</semantic:saveAsTileAction>
+	</semantic:FullscreenPage>
+</mvc:View>    
+<!-- </core:View> -->

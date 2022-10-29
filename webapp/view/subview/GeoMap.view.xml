@@ -1,0 +1,53 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<!-- <core:View -->
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" 
+    xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="i2d.eam.pmnotification.create.s1.controller.GeoMap">
+
+    <FlexBox
+		alignItems="Center"
+        justifyContent="Start"
+        visible="{geo>/isMenueVisible}">
+		<items>
+		    <HBox>
+    		    <Link text="{i18n>xlnk.map}" 
+    		          press="onShowMap" 
+    		          class="sapUiSmallMarginEnd"/>
+    		   <core:Icon 
+    		            xmlns="sap.ui.core"
+    		            tooltip="{i18n>xtol.expandOrCollapseMap}"
+    				   	src="{= ${geo>/isMapVisible}? 'sap-icon://collapse-group' : 'sap-icon://expand-group'}"
+    				   	press="onToggleMapDisplay"
+    				   	class="sapUiSmallMarginEnd sapUiSmallMarginTop">
+    		   	</core:Icon>
+		   	</HBox>
+		   	<HBox>
+    		    <Text 
+    		    	text="{= ${viewProperties>/hasGPSData} ? (${Location} + '').split(';')[0] + ',': ${i18n>xfld.noLoc}}"
+    		    	class="sapThemeLightText"/>
+    		    <Text 
+    		    	text="{= ${viewProperties>/hasGPSData} ? (${Location} + '').split(';')[1] : ''}"
+    		    	class="sapUiSmallMarginBegin sapThemeLightText"
+    		    	visible="{viewProperties>/hasGPSData}"/>		    	
+    		   <core:Icon 
+    		            xmlns="sap.ui.core"
+    				   	src="sap-icon://sys-cancel"
+    				   	press="onDiscardGPSData"
+    				   	tooltip="{i18n>xtol.discardGPS}"
+    				   	visible="{= ${viewProperties>/hasGPSData} &amp;&amp; ${viewProperties>/changeAllowed}}"
+    				   	class="sapThemeCriticalText sapUiSmallMarginTop sapUiSmallMarginBegin">
+    		   	</core:Icon>
+		   	</HBox>
+		</items>
+	</FlexBox>
+	<!--Holds the GeoMap control-->
+    <layout:HorizontalLayout id="pmNotifHorizontalLayoutGeoMap" visible="{geo>/isMapVisible}"/>
+</mvc:View>    
+<!-- </core:View> -->
