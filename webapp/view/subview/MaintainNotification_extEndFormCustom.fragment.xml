@@ -13,25 +13,84 @@
     <!--<CheckBox xmlns="sap.m" 
 	id="pmNotifCheckBoxNotifyMe_clone" selected="{Subscribed}" ariaLabelledBy="pmNotifLabelNotifyMe" text="{i18n&gt;xckl.notifyMeOfProgess}" visible="{path: 'UserCanBeNotified', formatter: '.formatter.checkForValidValue'}"/> -->
 
-    <layout:VerticalLayout id="pmNotifVerticalLayoutPriority" >
-        <Label id="pmNotifLabelPriority" text="{/#NotificationHeader/Priority/@sap:label}" labelFor="pmNotifInputPriority" />
-        <layout:content>
-            <Input id="pmNotifInputPriority" showSuggestion="true" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" />
-        </layout:content>
-        <layout:layoutData>
-            <layout:GridData span="L7 M7 S12" />
-        </layout:layoutData>
-    </layout:VerticalLayout>
-    	<VBox>
-		<Panel headerText="Upper left">
-			<FlexBox
-				height="100px"
-				alignItems="Start"
-				justifyContent="Start">
-				<Button text="1" type="Emphasized" class="sapUiSmallMarginEnd" />
-				<Button text="2" type="Reject" class="sapUiSmallMarginEnd" />
-				<Button text="3" type="Accept" />
-			</FlexBox>
-		</Panel>
-        </VBox>
+  <!-- ==== Priority ==== -->
+    <Label id="pmNotifLabelPriority" 
+           text="{/#NotificationHeader/Priority/@sap:label}" 
+           required="true"
+		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+           labelFor="pmNotifInputPriority" />
+
+					<layout:VerticalLayout
+						id="pmNotifVerticalLayoutInputPriority"
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}">
+						<layout:content>
+                      
+                         <Input  editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                 value = "{/NotificationPrioritySet/Maintpriority}"
+                                 showValueHelp = "true"
+                                 valueHelpRequest = "onValueHelpInputPriority" /> 
+					        
+						</layout:content>
+						
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+
+  <!-- ==== Grupo de códigos: Codificación ==== -->
+      <Label id="pmNotifLabelZqmgrp2" 
+           text="Codificación" 
+           required="true"
+		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+           labelFor="pmNotifInputZqmgrp2" />
+
+					<layout:VerticalLayout
+						id="pmNotifVerticalLayoutInputZqmgrp"
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}">
+						<layout:content>
+						    <!-- Input field for the Reporter in create/edit -->
+							<eam:SingleKeyInput id="pmNotifInputZqmgrp2" 
+                                        showValueHelp="true"
+                                        objectKey="{Zqmgrp}"
+                                        forceValidObject="false"
+                                        change="onInputChange"
+                                        visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                        maxLength="8">
+								<eam:valueHelp>
+									<eam:EAMValueHelp 
+									                entitySet="NotificationPriority"
+                                                    title="{i18n>xtit.selectReporter}"
+                                                    searchPlaceholder="{i18n>ymsg.searchForReporter}"
+                                                    resultTableHeader="{i18n>xtit.reporter}"
+                                                    defaultSelectionFields="FullName" 
+                                                    persistencyKey="EAMReporterVH"/>
+								</eam:valueHelp>
+  <!-- ==== Codificación ==== -->                                
+							</eam:SingleKeyInput>
+
+                                <eam:SingleKeyInput id="pmNotifInputZqmcod" 
+                                        showValueHelp="true"
+                                        objectKey="{Zqmcod}"
+                                        forceValidObject="false"
+                                        change="onInputChange"
+                                        visible="true"
+                                        enabled="false"
+                                        maxLength="4">
+								<eam:valueHelp>
+									<eam:EAMValueHelp 
+									                entitySet="NotificationPriority"
+                                                    title="{i18n>xtit.selectReporter}"
+                                                    searchPlaceholder="{i18n>ymsg.searchForReporter}"
+                                                    resultTableHeader="{i18n>xtit.reporter}"
+                                                    defaultSelectionFields="FullName" 
+                                                    persistencyKey="EAMReporterVH"/>
+								</eam:valueHelp>
+							</eam:SingleKeyInput>
+					        
+						</layout:content>
+						
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
 </core:FragmentDefinition>

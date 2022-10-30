@@ -46,6 +46,7 @@
                 <Property Name="Reporter" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Reported By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Subscribed" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Subscribed" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="SystemStatus" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="System Status" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="Zqmgrp2" Type="Edm.String" Nullable="false" MaxLength="8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Zqmkat" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Catalog Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Zqmgrp" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Code Group" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="Zqmcod" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Coding" sap:creatable="false" sap:updatable="false"/>

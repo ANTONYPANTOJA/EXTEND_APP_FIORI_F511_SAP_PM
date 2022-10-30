@@ -265,7 +265,6 @@
         			<core:ExtensionPoint name="extEndForm" />      					
 				</form:content>
 			</form:SimpleForm>
-			
 			<!-- ==== Attachments ==== -->
 			<layout:VerticalLayout width="100%">
 				<layout:content>
@@ -273,7 +272,7 @@
                     <core:ComponentContainer id="pmNotifContainerAttachments" usage="attachmentReuseComponent" propagateModel="true" />				    
 				</layout:content>
 				<layout:layoutData>
-					<layout:GridData span="L12 M12 S12" />
+					<layout:GridData span="L12 M12 S12"/>
 				</layout:layoutData>
 			</layout:VerticalLayout>
 			

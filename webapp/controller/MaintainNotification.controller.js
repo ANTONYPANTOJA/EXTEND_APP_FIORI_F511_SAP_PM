@@ -3,7 +3,7 @@
 /*
  * Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-sap.ui.define(["i2d/eam/pmnotification/create/s1/util/Constants", "i2d/eam/pmnotification/create/s1/controller/BaseController", "sap/ui/model/json/JSONModel", "i2d/eam/pmnotification/create/s1/util/TextTemplateHandler", "sap/ui/core/format/DateFormat", "i2d/eam/pmnotification/create/s1/model/formatter", "sap/m/MessageBox"], function (C, B, J, T, D, f, M) {
+sap.ui.define(["i2d/eam/pmnotification/create/s1/util/Constants", "i2d/eam/pmnotification/create/s1/controller/BaseController", "sap/ui/model/json/JSONModel", "i2d/eam/pmnotification/create/s1/util/TextTemplateHandler", "sap/ui/core/format/DateFormat", "i2d/eam/pmnotification/create/s1/model/formatter", "sap/m/MessageBox",], function (C, B, J, T, D, f, M) {
   "use strict";
 
   return B.extend("i2d.eam.pmnotification.create.s1.controller.MaintainNotification", {
@@ -27,6 +27,8 @@ sap.ui.define(["i2d/eam/pmnotification/create/s1/util/Constants", "i2d/eam/pmnot
     _bTypeChangeLoaded: false,
     _sContextPath: null,
     onInit: function () {
+      
+
       this._oAppModel = this.getModel(C.MODEL.APP_MODEL.NAME);
       this.getView().loaded().then(function () {
         this._oDataHelper = this.getODataHelper();
