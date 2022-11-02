@@ -1,0 +1,89 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:eam="sap.i2d.eam.lib.pmnotification.s1.controls"
+    xmlns:util="i2d.eam.pmnotification.create.zeamntfcres1.util"
+    xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <!-- This extension point can be used to add fields to form:content -->
+    <!--<CheckBox xmlns="sap.m" 
+	id="pmNotifCheckBoxNotifyMe_clone" selected="{Subscribed}" ariaLabelledBy="pmNotifLabelNotifyMe" text="{i18n&gt;xckl.notifyMeOfProgess}" visible="{path: 'UserCanBeNotified', formatter: '.formatter.checkForValidValue'}"/> -->
+
+  <!-- ==== Priority ==== -->
+    <Label id="pmNotifLabelPriority" 
+           text="{/#NotificationHeader/Priority/@sap:label}" 
+           required="false"
+		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+           labelFor="pmNotifInputPriority"
+           design="Bold" />
+
+					<layout:VerticalLayout
+						id="pmNotifVerticalLayoutInputPriority"
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+                        width="20%">
+
+						<layout:content>
+                      
+                         <Input  id="pmNotifInputpriority"
+                                 editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                  value = "{Priority}"
+                                  showValueHelp = "true"
+                                  valueHelpRequest = "onValueHelpInputPriority" maxLength="1"/> 
+	
+
+                           <eam:SingleKeyInput id="pmNotifInputPriorityText" 
+                                        showValueHelp="true"
+                                        objectKey="{PriorityText}"
+                                        forceValidObject="false"
+                                        change="onInputChange"
+                                        visible="true"
+                                        enabled="false">
+                            </eam:SingleKeyInput>    
+                            <Input  id="pmNotifInputPriorityType" visible="false" value="{PriorityType}" />        
+
+						</layout:content>
+						
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+
+  <!-- ==== Grupo de códigos: Codificación ==== -->
+      <Label id="pmNotifLabelZqmgrp2" 
+            design="Bold"
+           text="{/#NotificationHeader/Zqmgrp2/@sap:label}" 
+           required="false"
+		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+           labelFor="pmNotifInputZqmgrp2" />
+
+					<layout:VerticalLayout
+						id="pmNotifVerticalLayoutInputZqmgrp"
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+                        width="40%">
+						<layout:content>
+ <!-- ==== Codificación ==== -->  
+                            <Input  id="pmNotifInputZqmgrp2"
+                                 editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                  value = "{Zqmgrp2}"
+                                  showValueHelp = "true"
+                                  valueHelpRequest = "onValueHelpInputGrpCod" maxLength="8" />
+ 
+                                 <Input  id="pmNotifInputZqmcod"
+                                         editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                         value = "{Zqmcod}"
+                                         enabled="false" 
+                                         maxLength="4" />
+
+                            <Label id="pmNotifLabelTxtZqmcod" text="{ZqmcodText}" visible="true"/>
+					        
+						</layout:content>
+						
+						<layout:layoutData>
+							<layout:GridData span="L7 M7 S12" />
+						</layout:layoutData>
+					</layout:VerticalLayout>
+</core:FragmentDefinition>

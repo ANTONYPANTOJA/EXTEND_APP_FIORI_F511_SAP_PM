@@ -1,0 +1,300 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"_version": "1.2.0",
+		"id": "i2d.eam.pmnotification.create.zeamntfcres1",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "9.0.1"
+		},
+		"title": "{{TILE_TITLE_CREATE}}",
+		"tags": {
+			"keywords": [
+				"{{Create}}"
+			]
+		},
+		"ach": "PM-FIO",
+		"dataSources": {
+			"EAM_NTF_CREATE": {
+				"uri": "/sap/opu/odata/sap/ZEAM_NTF_CREATE_SRV_01/",
+				"settings": {
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"annotation"
+					]
+				}
+			},
+			"annotation": {
+				"type": "ODataAnnotation",
+				"uri": "annotation/annotation.xml",
+				"settings": {
+					"localUri": "annotation/annotation.xml"
+				}
+			}
+		},
+		"resources": "resources.json",
+		"crossNavigation": {
+			"inbounds": {
+				"MaintenanceNotificationCreate": {
+					"semanticObject": "MaintenanceNotification",
+					"action": "create_simple",
+					"title": "{{TILE_TITLE_CREATE}}",
+					"signature": {
+						"parameters": {
+							"navTarget": {
+								"defaultValue": {
+									"value": "create"
+								},
+								"required": false
+							},
+							"NotificationType": {
+								"required": false
+							},
+							"TechnicalObjectLabel": {
+								"required": false
+							},
+							"TechObjIsEquipOrFuncnlLoc": {
+								"required": false
+							},
+							"MaintenanceObject": {
+								"required": false,
+								"renameTo": "TechnicalObjectLabel"
+							},
+							"sap-iapp-state": {
+								"required": false
+							}
+						},
+						"additionalParameters": "ignored"
+					}
+				},
+				"MaintenanceNotificationList": {
+					"semanticObject": "MaintenanceNotification",
+					"action": "list_simple",
+					"title": "{{TILE_TITLE_LIST}}",
+					"signature": {
+						"parameters": {
+							"navTarget": {
+								"filter": {
+									"value": "list"
+								},
+								"required": true
+							},
+							"MaintenanceNotification": {
+								"required": false
+							},
+							"sap-iapp-state": {
+								"required": false
+							}
+						},
+						"additionalParameters": "ignored"
+					}
+				}
+			}
+		},
+		"destination": {
+			"name": ""
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"config": {
+			"sapFiori2Adaptation": true
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"services": {
+			"ShellUIService": {
+				"factoryName": "sap.ushell.ui5service.ShellUIService"
+			}
+		},
+        "extends": {
+            "component": "i2d.eam.pmnotification.create.zeamntfcres1",
+            "extensions": {
+                "sap.ui.viewExtensions": {
+                    "i2d.eam.pmnotification.create.zeamntfcres1.view.subview.MaintainNotification": {
+                        "extEndForm": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "i2d.eam.pmnotification.create.zeamntfcres1.view.subview.MaintainNotification_extEndFormCustom",
+                            "type": "XML"
+                        }
+                    }
+                },
+				"sap.ui.controllerExtensions": {
+					"i2d.eam.pmnotification.create.zeamntfcres1.controller.MaintainNotification": {
+						"controllerName": "i2d.eam.pmnotification.create.zeamntfcres1.controller.MaintainNotificationCustom"
+					}
+				}
+            }
+        },
+		"dependencies": {
+			"minUI5Version": "1.90.2",
+			"libs": {
+				"sap.m": {
+					"lazy": false
+				},
+				"sap.me": {
+					"lazy": true
+				},
+				"sap.ushell": {
+					"lazy": false
+				},
+				"sap.i2d.eam.lib.pmnotification.s1": {
+					"lazy": false
+				},
+				"sap.ui.layout": {
+					"lazy": false
+				},
+				"sap.ui.table": {
+					"lazy": true
+				},
+				"sap.ui.comp": {
+					"lazy": true
+				},
+				"sap.suite.ui.commons": {
+					"lazy": true
+				},
+				"sap.ui.unified": {
+					"lazy": false	
+				}
+			},
+			"components": {
+				"sap.se.mi.plm.lib.attachmentservice.attachment": {
+					"lazy": true
+				}
+			}
+		},
+		"componentUsages": {
+			"attachmentReuseComponent": {
+				"name": "sap.se.mi.plm.lib.attachmentservice.attachment",
+				"settings": {
+					"lazy": true
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "EAM_NTF_CREATE",
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"defaultUpdateMethod": "PUT",
+					"loadMetadataAsync": false
+				}
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"rootView": {
+			"viewName": "i2d.eam.pmnotification.create.zeamntfcres1.view.App",
+			"type": "XML",
+			"async": true
+		},
+		"handleValidation": true,
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "i2d.eam.pmnotification.create.zeamntfcres1.view",
+				"controlId": "fioriContent",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"clearAggregation": false,
+				"async": true
+			},
+			"routes": [{
+				"pattern": "Create:?iAppState:",
+				"name": "create",
+				"target": "create"
+			}, {
+				"pattern": "Edit/{NotificationNumber}:?iAppState:",
+				"name": "edit",
+				"target": "edit"
+			}, {
+				"pattern": "Display/{NotificationNumber}",
+				"name": "display",
+				"target": "display"
+			}, {
+				"pattern": "List:?iAppState:",
+				"name": "list",
+				"target": "list"
+			}],
+			"targets": {
+				"create": {
+					"viewName": "S1",
+					"viewId": "create",
+					"viewLevel": 1
+				},
+				"edit": {
+					"viewName": "S2",
+					"viewId": "edit",
+					"viewLevel": 4
+				},
+				"display": {
+					"viewName": "S3",
+					"viewId": "display",
+					"viewLevel": 3,
+					"clearAggregation": false
+				},
+				"list": {
+					"viewName": "S0",
+					"viewId": "list",
+					"viewLevel": 1
+				},
+				"objectNotFound": {
+					"viewName": "ObjectNotFound",
+					"viewId": "objectNotFound",
+					"viewLevel": 3
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"_version": "1.1.0",
+		"uri": "/sap/bc/ui5_ui5/EAM_NTF_CRES1"
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [
+			"F1511"
+		],
+		"archeType": "transactional"
+	},
+	"sap.copilot": {
+		"_version": "1.0.0",
+		"contextAnalysis": {
+			"whitelistedEntityTypes": [
+				"EAM_NTF_CREATE.NotificationHeader"
+			]
+		}
+	}
+}

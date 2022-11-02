@@ -1,0 +1,37 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition   
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns:layout="sap.ui.layout"
+  xmlns="sap.m"
+  xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+<!--used on mobile devices if size dosn't allow embedded display of map'-->
+    <ResponsivePopover contentHeight="100%"
+             contentWidth="80%"
+             title="{i18n>xtit.techObjectLoc}"
+             showHeader="true"
+             placement="Auto" 
+             visible="{appProperties>/hasGPS}">
+        <content>
+            <Page title="{i18n>xtit.techObjectLoc}"
+            	  showHeader="false"
+            	  busy="{appProperties>/busy}"
+    		      busyIndicatorDelay="{appProperties>/delay}">
+                <!-- GeoMap to be displayed in Popover/Dialog--> 
+                <mvc:XMLView 
+                    height="100%" 
+                    width="100%" 
+                    viewName="i2d.eam.pmnotification.create.zeamntfcres1.view.subview.GeoMap" 
+                    id="pmNotifViewGeoMapView"
+                    cd:displayMapInPopover="true"
+                    />
+            </Page>     
+        </content>
+    </ResponsivePopover>
+    
+</core:FragmentDefinition>
