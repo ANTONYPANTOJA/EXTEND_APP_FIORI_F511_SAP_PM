@@ -1,125 +1,134 @@
+jQuery.sap.require("sap.ui.model.Filter");
+jQuery.sap.require("sap.ui.model.FilterOperator");
+
 sap.ui.controller(
-    
-        "i2d.eam.pmnotification.create.s1.controller.MaintainNotificationCustom",
+    //sap.ui.core.mvc.Controller.extend(    
+    "i2d.eam.pmnotification.create.s1.controller.MaintainNotificationCustom",
 
-{
+    {
 
-	extHookAdditionalSearchOptions: function() {
-		// Place your hook implementation code here 
-	},
-    onValueHelpInputPriority: function (oEvent) {
-        sap.m.MessageToast.show("Hola Mundo.. Priority");
-        
+        extHookAdditionalSearchOptions: function () {
+            // Place your hook implementation code here 
+        },
+        onValueHelpInputPriority: function (oEvent) {
+            sap.m.MessageToast.show("Hola Mundo.. Priority");
 
-        var oButton = oEvent.getSource(),
-        oView = this.getView();
 
-    if (!this._pDialog) {
-        this._pDialog = sap.ui.core.Fragment.load({
-            id: oView.getId(),
-            name: "i2d.eam.pmnotification.create.s1.view.fragments.PopupPriority",
-            controller: this
-        }).then(function(oDialog){
-            oView.addDependent(oDialog);
-            return oDialog;
-        });
-    }
+            var oButton = oEvent.getSource(),
+                oView = this.getView();
 
-    this._pDialog.then(function(oDialog){
-        this._configDialog(oButton, oDialog);
-        oDialog.open();
-    }.bind(this));
+            if (!this._pDialog) {
+                this._pDialog = sap.ui.core.Fragment.load({
+                    id: oView.getId(),
+                    name: "i2d.eam.pmnotification.create.s1.view.fragments.PopupPriority",
+                    controller: this
+                }).then(function (oDialog) {
+                    oView.addDependent(oDialog);
+                    return oDialog;
+                });
+            }
 
-    },
-    
+            this._pDialog.then(function (oDialog) {
+                this._configDialog(oButton, oDialog);
+                oDialog.open();
+            }.bind(this));
 
-		_configDialog: function (oButton, oDialog) {
-			// Set draggable property
-			var bDraggable = oButton.data("draggable");
-			oDialog.setDraggable(bDraggable == "true");
+        },
 
-			// Set resizable property
-			var bResizable = oButton.data("resizable");
-			oDialog.setResizable(bResizable == "true");
 
-			// Multi-select if required
-			var bMultiSelect = !!oButton.data("multi");
-			oDialog.setMultiSelect(bMultiSelect);
+        _configDialog: function (oButton, oDialog) {
+            // Set draggable property
+            var bDraggable = oButton.data("draggable");
+            oDialog.setDraggable(bDraggable == "true");
 
-			// Remember selections if required
-			var bRemember = !!oButton.data("remember");
-			oDialog.setRememberSelections(bRemember);
+            // Set resizable property
+            var bResizable = oButton.data("resizable");
+            oDialog.setResizable(bResizable == "true");
 
-			var sResponsivePadding = oButton.data("responsivePadding");
-			var sResponsiveStyleClasses = "sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer";
+            // Multi-select if required
+            var bMultiSelect = !!oButton.data("multi");
+            oDialog.setMultiSelect(bMultiSelect);
 
-			if (sResponsivePadding) {
-				oDialog.addStyleClass(sResponsiveStyleClasses);
-			} else {
-				oDialog.removeStyleClass(sResponsiveStyleClasses);
-			}
+            // Remember selections if required
+            var bRemember = !!oButton.data("remember");
+            oDialog.setRememberSelections(bRemember);
 
-			// Set custom text for the confirmation button
-			var sCustomConfirmButtonText = oButton.data("confirmButtonText");
-			oDialog.setConfirmButtonText(sCustomConfirmButtonText);
+            var sResponsivePadding = oButton.data("responsivePadding");
+            var sResponsiveStyleClasses = "sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer";
 
-			// toggle compact style
-			//sap.ui.core.syncStyleClass("sapUiSizeCompact", this.getView(), oDialog);
-		},
+            if (sResponsivePadding) {
+                oDialog.addStyleClass(sResponsiveStyleClasses);
+            } else {
+                oDialog.removeStyleClass(sResponsiveStyleClasses);
+            }
+
+            // Set custom text for the confirmation button
+            var sCustomConfirmButtonText = oButton.data("confirmButtonText");
+            oDialog.setConfirmButtonText(sCustomConfirmButtonText);
+
+            // toggle compact style
+            //sap.ui.core.syncStyleClass("sapUiSizeCompact", this.getView(), oDialog);
+        },
 
         handleSearch: function (oEvent) {
-			var sValue = oEvent.getParameter("value");
-			//var oFilter = new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
-            var oFilter =  sap.ui.model.Filter("Maintprioritydesc", sap.ui.model.FilterOperator.Contains, sValue);
 
-            oEvent.getSource().getBinding( "items" ).filter( [oFilter] );
-            
-			//var oBinding = oEvent.getSource().getBinding("items");
-			//oBinding.filter([oFilter]);
-		},
+
+            var sValue = oEvent.getParameter("value");
+            //var oFilter = new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
+
+            var oFilter = sap.ui.model.Filter("Maintprioritydesc", sap.ui.model.FilterOperator.EQ, sValue);
+
+            oEvent.getSource().getBinding("items").filter([oFilter]);
+
+            //var oBinding = oEvent.getSource().getBinding("items");
+            //oBinding.filter([oFilter]);
+        },
 
         handleClose: function (oEvent) {
-			// reset the filter
-			var oBinding = oEvent.getSource().getBinding("items");
-			oBinding.filter([]);
+            // reset the filter
+            var oBinding = oEvent.getSource().getBinding("items");
+            oBinding.filter([]);
 
+            //===================================================================//
             //Traer el objeto Press Item o Click
-            const PressItemTable = oEvent.getParameter("selectedContexts");
-            //const context = clickedItem.getBindingContext(/*modelName*/"ac"); // given items="{ac>...}" 
-           // const context = PressItemTable.getBindingContext();
+            const aContexts = oEvent.getParameter("selectedContexts")
 
-            var oView = this.getView();
-            var oName = oView.getModel().getProperty("Maintpriority", PressItemTable.getBindingContext());
+            if (aContexts && aContexts.length) {
+                //Values Seleccionados
+                console.log(aContexts[0].getObject().Maintpriority);
+                console.log(aContexts[0].getObject().Maintprioritydesc);
+                console.log(aContexts[0].getObject().Maintprioritytype);
 
+                //===================================================================//
 
-			var aContexts = oEvent.getParameter("selectedContexts");
+                
+                var oSelectedItem = oEvent.getSource();
+                var oContext = oSelectedItem.getBindingContext();
+                var sPath = oContext.getPath();
 
+                
+                // SET INPUT TEXT VALUE //
+                this.getView().byId("pmNotifInputpriority").setValue(aContexts[0].getObject().Maintpriority);
+                this.getView().byId("pmNotifInputPriorityText").setValue(aContexts[0].getObject().Maintprioritydesc);
+                this.getView().byId("pmNotifInputPriorityType").setValue(aContexts[0].getObject().Maintprioritytype);
 
+                //===================================================================//
+                 //===================================================================//
 
-			if (aContexts && aContexts.length) {
-				//sap.m.MessageToast.show("You have chosen " + aContexts.map(function (oContext) { return oContext.getObject().Maintprioritydesc; }).join(", "));
-			}
-            var oItem = oEvent.getSource();
-            let priok = oItem.getBindingContext().getProperty("Maintpriority");
+                 //Setear la propiedades del input Text//
 
-            //let priok      =  oEvent.getParameter("selectedContexts").getBindingContext().getProperty("Maintpriority");
-            //let type_priok =  oEvent.getParameter("selectedContexts").getBindingContext().getProperty("Maintprioritytype");
+                 //var inputPriority = this.byId("pmNotifInputpriority");
+                 //inputPriority.bindProperty("description", aContexts[0].getObject().Maintprioritydesc); 
+                 //inputPriority.bindElement("/NotificationHeaderSet");
+                 //inputPriority.bindProperty(aContexts[0].getObject().Maintpriority, "/NotificationHeaderSet/Priority); 
+                
+                 //===================================================================//
+                //===================================================================//
+                var objectMain = oEvent.getSource().getBindingContext().getObject();
 
+            }   
+            
 
-            var sBindingPath = "/NotificationPrioritySet";
-            var productPath = oEvent.getSource().getBindingContext().getObject();
-				product = productPath.split("/").slice(-1).pop();
+        }
 
-
-            //let objContext = oEvent.getSource().getBindingContext(contexto).getObject();
-
-            //var contextObject = aContexts.getObject();
-
-     
-            // var oModel = this.getView().getModel();
-            //     oModel.setProperty("sBindingPath", "1"); 
-          
-
-		}
-
-});
+    });

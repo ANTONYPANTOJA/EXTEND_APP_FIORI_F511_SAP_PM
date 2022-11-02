@@ -1,17 +1,17 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
     <TableSelectDialog id="myDialog" 
-                       noDataText="No Products Found" 
-                       title="Select Product" 
+                       noDataText="No se ha encontrado datos" 
+                       title="Seleccione Prioridad" 
                        search=".handleSearch" 
                        confirm=".handleClose" 
                        cancel=".handleClose" 
                        items="{
 			path : '/NotificationPrioritySet',
-			sorter : {
-				path : 'Maintprioritydesc',
-				descending : false
-			}
-		}">
+			sorter : [ { path: 'Maintprioritytype',
+                         descending: false,
+                         group: true },
+                         { path: 'Maintpriority',
+                            descending: false } ] }">
 
         <ColumnListItem>
             <cells>

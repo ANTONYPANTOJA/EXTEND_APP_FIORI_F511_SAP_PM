@@ -17,7 +17,7 @@
         "ach": "PM-FIO",
         "dataSources": {
             "EAM_NTF_CREATE": {
-                "uri": "/sap/opu/odata/sap/ZEAM_NTF_CREATE_SRV/",
+                "uri": "/sap/opu/odata/sap/ZEAM_NTF_CREATE_SRV_01/",
                 "settings": {
                     "localUri": "localService/EAM_NTF_CREATE/metadata.xml",
                     "annotations": [

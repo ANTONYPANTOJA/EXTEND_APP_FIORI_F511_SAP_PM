@@ -18,18 +18,33 @@
            text="{/#NotificationHeader/Priority/@sap:label}" 
            required="true"
 		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
-           labelFor="pmNotifInputPriority" />
+           labelFor="pmNotifInputPriority"
+           design="Bold" />
 
 					<layout:VerticalLayout
 						id="pmNotifVerticalLayoutInputPriority"
-						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}">
+						visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
+                        width="20%">
+
 						<layout:content>
                       
-                         <Input  editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
-                                 value = "{/NotificationPrioritySet/Maintpriority}"
-                                 showValueHelp = "true"
-                                 valueHelpRequest = "onValueHelpInputPriority" /> 
-					        
+                         <Input  id="pmNotifInputpriority"
+                                 editable = "{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}"
+                                  value = "{Priority}"
+                                  showValueHelp = "true"
+                                  valueHelpRequest = "onValueHelpInputPriority" /> 
+	
+
+                           <eam:SingleKeyInput id="pmNotifInputPriorityText" 
+                                        showValueHelp="true"
+                                        objectKey="{PriorityText}"
+                                        forceValidObject="false"
+                                        change="onInputChange"
+                                        visible="true"
+                                        enabled="false">
+                            </eam:SingleKeyInput>    
+                            <Input  id="pmNotifInputPriorityType" visible="false" value="{PriorityType}" />        
+
 						</layout:content>
 						
 						<layout:layoutData>
@@ -39,6 +54,7 @@
 
   <!-- ==== Grupo de códigos: Codificación ==== -->
       <Label id="pmNotifLabelZqmgrp2" 
+            design="Bold"
            text="Codificación" 
            required="true"
 		   visible="{path: 'appProperties>/isCreateMode', formatter: '.formatter.checkForValidValue'}" 
