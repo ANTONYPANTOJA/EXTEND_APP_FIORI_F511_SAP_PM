@@ -1,0 +1,1554 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/Component.js",
+			"size": 5151,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+				"i2d/eam/pmnotification/create/s1/model/models.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "Component-h2-preload-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/Component-h2-preload.js",
+			"size": 17815,
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.controller.js",
+				"jquery.sap.global.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/EAMValueHelp.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/SingleKeyInput.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/TechnicalObjectInput.js",
+				"sap/m/ActionSheet.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/GroupHeaderListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/IconTabBar.js",
+				"sap/m/IconTabFilter.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePage.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Select.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MainAction.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SemanticObjectController.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/FixFlex.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/ResponsiveFlowLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			],
+			"included": [
+				"i2d/eam/pmnotification/create/s1/Component.js",
+				"i2d/eam/pmnotification/create/s1/manifest.json",
+				"i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+				"i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ar.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_bg.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ca.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_cs.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_da.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_de.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_el.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_sappsd.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_saptrc.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_es.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_et.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hu.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_it.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_iw.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ja.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_kk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ko.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ms.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_nl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_no.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ro.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ru.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sh.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_th.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_tr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_uk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_vi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_CN.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_TW.properties",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/model/models.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+				"i2d/eam/pmnotification/create/s1/util/Notifications.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"i2d/eam/pmnotification/create/s1/view/App.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/NotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/ObjectNotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S0.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S1.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S2.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S3.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Attachments.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/CurrentNotifications.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/EmployeeQuickView.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/GeoMap.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Search.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/TechnicalObjectOverview.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/GeoMap.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/TechnicalObjectOverviewAttachments.view.xml"
+			]
+		},
+		{
+			"name": "Component-h2-preload.js",
+			"module": "i2d/eam/pmnotification/create/s1/Component-h2-preload.js",
+			"size": 17701,
+			"merged": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.controller.js",
+				"jquery.sap.global.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/EAMValueHelp.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/SingleKeyInput.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/TechnicalObjectInput.js",
+				"sap/m/ActionSheet.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/GroupHeaderListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/IconTabBar.js",
+				"sap/m/IconTabFilter.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePage.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Select.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MainAction.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SemanticObjectController.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/FixFlex.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/ResponsiveFlowLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			],
+			"included": [
+				"i2d/eam/pmnotification/create/s1/Component.js",
+				"i2d/eam/pmnotification/create/s1/manifest.json",
+				"i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+				"i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ar.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_bg.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ca.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_cs.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_da.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_de.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_el.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_sappsd.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_saptrc.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_es.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_et.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hu.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_it.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_iw.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ja.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_kk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ko.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ms.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_nl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_no.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ro.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ru.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sh.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_th.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_tr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_uk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_vi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_CN.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_TW.properties",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/model/models.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+				"i2d/eam/pmnotification/create/s1/util/Notifications.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"i2d/eam/pmnotification/create/s1/view/App.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/NotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/ObjectNotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S0.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S1.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S2.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S3.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Attachments.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/CurrentNotifications.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/EmployeeQuickView.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/GeoMap.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Search.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/TechnicalObjectOverview.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/GeoMap.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/TechnicalObjectOverviewAttachments.view.xml"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "i2d/eam/pmnotification/create/s1/Component-preload.js",
+			"size": 554805,
+			"merged": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.controller.js",
+				"jquery.sap.global.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/EAMValueHelp.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/SingleKeyInput.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/TechnicalObjectInput.js",
+				"sap/m/ActionSheet.js",
+				"sap/m/App.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/FlexBox.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/GroupHeaderListItem.js",
+				"sap/m/HBox.js",
+				"sap/m/IconTabBar.js",
+				"sap/m/IconTabFilter.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessagePage.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Page.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Select.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MainAction.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Device.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SemanticObjectController.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/core/routing/History.js",
+				"sap/ui/layout/FixFlex.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/ResponsiveFlowLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			],
+			"included": [
+				"i2d/eam/pmnotification/create/s1/Component.js",
+				"i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+				"i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+				"i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ar.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_bg.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ca.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_cs.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_da.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_de.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_el.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_sappsd.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_saptrc.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_es.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_et.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_fr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_hu.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_it.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_iw.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ja.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_kk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ko.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_lv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ms.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_nl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_no.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_pt.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ro.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_ru.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sh.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sl.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_sv.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_th.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_tr.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_uk.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_vi.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_CN.properties",
+				"i2d/eam/pmnotification/create/s1/i18n/i18n_zh_TW.properties",
+				"i2d/eam/pmnotification/create/s1/manifest.json",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/model/models.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+				"i2d/eam/pmnotification/create/s1/util/Notifications.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"i2d/eam/pmnotification/create/s1/view/App.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/NotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/ObjectNotFound.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S0.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S1.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S2.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/S3.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Attachments.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/CurrentNotifications.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/EmployeeQuickView.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/GeoMap.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/Search.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/fragments/TechnicalObjectOverview.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/GeoMap.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/TechnicalObjectOverviewAttachments.view.xml"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "i2d/eam/pmnotification/create/s1/Component.js",
+			"size": 2487,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+				"i2d/eam/pmnotification/create/s1/model/models.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/Device.js",
+				"sap/ui/core/UIComponent.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "annotation/annotation.xml",
+			"size": 3113
+		},
+		{
+			"name": "controller/App-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+			"size": 10406,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/Notifications.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/App.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+			"size": 4343,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/Notifications.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/BaseController-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+			"size": 28780,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/routing/History.js"
+			]
+		},
+		{
+			"name": "controller/BaseController.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+			"size": 10003,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/routing/History.js"
+			]
+		},
+		{
+			"name": "controller/ErrorHandler-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+			"size": 5877,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "controller/ErrorHandler.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/ErrorHandler.js",
+			"size": 2717,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "controller/GeoMap-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+			"size": 24398,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js"
+			]
+		},
+		{
+			"name": "controller/GeoMap.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+			"size": 375,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js"
+			]
+		},
+		{
+			"name": "controller/LinksForTechnicalObject-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+			"size": 3990,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/GroupHeaderListItem.js"
+			]
+		},
+		{
+			"name": "controller/LinksForTechnicalObject.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+			"size": 2118,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/GroupHeaderListItem.js"
+			]
+		},
+		{
+			"name": "controller/MaintainNotification-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+			"size": 52231,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/MaintainNotification.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+			"size": 25546,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S0-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+			"size": 13254,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js"
+			]
+		},
+		{
+			"name": "controller/S0.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+			"size": 6131,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/Util.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/ODataUtils.js"
+			]
+		},
+		{
+			"name": "controller/S1-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+			"size": 6188,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S1.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+			"size": 2988,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S2-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+			"size": 3964,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S2.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+			"size": 1940,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S3-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+			"size": 13040,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/S3.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+			"size": 6630,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/TechnicalObjectOverviewAttachments-dbg.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+			"size": 6074,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js"
+			]
+		},
+		{
+			"name": "controller/TechnicalObjectOverviewAttachments.controller.js",
+			"module": "i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+			"size": 3057,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.js",
+				"i2d/eam/pmnotification/create/s1/model/formatter.js",
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/m/MessageBox.js"
+			]
+		},
+		{
+			"name": "css/style-dbg.css",
+			"size": 780,
+			"isDebug": true
+		},
+		{
+			"name": "css/style.css",
+			"size": 441
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n.properties",
+			"size": 10392,
+			"locale": "",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ar.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ar.properties",
+			"size": 19633,
+			"locale": "ar",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_bg.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_bg.properties",
+			"size": 23727,
+			"locale": "bg",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ca.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ca.properties",
+			"size": 11305,
+			"locale": "ca",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_cs.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_cs.properties",
+			"size": 12123,
+			"locale": "cs",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_da.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_da.properties",
+			"size": 10724,
+			"locale": "da",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_de.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_de.properties",
+			"size": 11106,
+			"locale": "de",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_el.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_el.properties",
+			"size": 23714,
+			"locale": "el",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_en.properties",
+			"size": 10606,
+			"locale": "en",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_sappsd.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_sappsd.properties",
+			"size": 26494,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_saptrc.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_en_US_saptrc.properties",
+			"size": 13220,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_es.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_es.properties",
+			"size": 11300,
+			"locale": "es",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_et.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_et.properties",
+			"size": 10674,
+			"locale": "et",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fi.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_fi.properties",
+			"size": 11091,
+			"locale": "fi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fr.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_fr.properties",
+			"size": 11471,
+			"locale": "fr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hi.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_hi.properties",
+			"size": 21896,
+			"locale": "hi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hr.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_hr.properties",
+			"size": 11048,
+			"locale": "hr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hu.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_hu.properties",
+			"size": 12352,
+			"locale": "hu",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_it.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_it.properties",
+			"size": 10944,
+			"locale": "it",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_iw.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_iw.properties",
+			"size": 18255,
+			"locale": "iw",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ja.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ja.properties",
+			"size": 13887,
+			"locale": "ja",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_kk.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_kk.properties",
+			"size": 23682,
+			"locale": "kk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ko.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ko.properties",
+			"size": 13575,
+			"locale": "ko",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lt.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_lt.properties",
+			"size": 11848,
+			"locale": "lt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lv.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_lv.properties",
+			"size": 12202,
+			"locale": "lv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ms.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ms.properties",
+			"size": 10618,
+			"locale": "ms",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_nl.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_nl.properties",
+			"size": 10738,
+			"locale": "nl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_no.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_no.properties",
+			"size": 10579,
+			"locale": "no",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pl.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_pl.properties",
+			"size": 11771,
+			"locale": "pl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pt.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_pt.properties",
+			"size": 11352,
+			"locale": "pt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ro.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ro.properties",
+			"size": 11515,
+			"locale": "ro",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ru.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_ru.properties",
+			"size": 22943,
+			"locale": "ru",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sh.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_sh.properties",
+			"size": 11170,
+			"locale": "sh",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sk.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_sk.properties",
+			"size": 11856,
+			"locale": "sk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sl.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_sl.properties",
+			"size": 11048,
+			"locale": "sl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sv.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_sv.properties",
+			"size": 10962,
+			"locale": "sv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_th.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_th.properties",
+			"size": 21740,
+			"locale": "th",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_tr.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_tr.properties",
+			"size": 11435,
+			"locale": "tr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_uk.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_uk.properties",
+			"size": 23855,
+			"locale": "uk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_vi.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_vi.properties",
+			"size": 15448,
+			"locale": "vi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_CN.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_zh_CN.properties",
+			"size": 12229,
+			"locale": "zh_CN",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_TW.properties",
+			"module": "i2d/eam/pmnotification/create/s1/i18n/i18n_zh_TW.properties",
+			"size": 12339,
+			"locale": "zh_TW",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "img/pin_blue.png",
+			"size": 5076
+		},
+		{
+			"name": "localService/CA_FM_FEATURE_TOGGLE_STATUS_SRV.xml",
+			"size": 1606
+		},
+		{
+			"name": "localService/CV_ATTACHMENT_SRV.xml",
+			"size": 43966
+		},
+		{
+			"name": "localService/metadata.xml",
+			"size": 61420
+		},
+		{
+			"name": "localService/mockserver-dbg.js",
+			"size": 7211,
+			"isDebug": true
+		},
+		{
+			"name": "localService/mockserver.js",
+			"size": 4131
+		},
+		{
+			"name": "manifest.json",
+			"module": "i2d/eam/pmnotification/create/s1/manifest.json",
+			"size": 5680
+		},
+		{
+			"name": "model/formatter-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/model/formatter.js",
+			"size": 10855,
+			"isDebug": true,
+			"required": [
+				"sap/m/Text.js",
+				"sap/ui/core/format/DateFormat.js"
+			]
+		},
+		{
+			"name": "model/formatter.js",
+			"module": "i2d/eam/pmnotification/create/s1/model/formatter.js",
+			"size": 5921,
+			"required": [
+				"sap/m/Text.js",
+				"sap/ui/core/format/DateFormat.js"
+			]
+		},
+		{
+			"name": "model/models-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/model/models.js",
+			"size": 494,
+			"isDebug": true,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "model/models.js",
+			"module": "i2d/eam/pmnotification/create/s1/model/models.js",
+			"size": 354,
+			"required": [
+				"sap/ui/Device.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "resources.json",
+			"size": 36060
+		},
+		{
+			"name": "util/Constants-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Constants.js",
+			"size": 2947,
+			"isDebug": true
+		},
+		{
+			"name": "util/Constants.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Constants.js",
+			"size": 1963
+		},
+		{
+			"name": "util/ExpandableTextArea-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+			"size": 1481,
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "util/ExpandableTextArea.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+			"size": 931,
+			"required": [
+				"jquery.sap.global.js"
+			]
+		},
+		{
+			"name": "util/Notifications-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Notifications.js",
+			"size": 12386,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "util/Notifications.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Notifications.js",
+			"size": 4022,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "util/TextTemplateHandler-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+			"size": 6880,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js"
+			]
+		},
+		{
+			"name": "util/TextTemplateHandler.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/TextTemplateHandler.js",
+			"size": 2646,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js"
+			]
+		},
+		{
+			"name": "util/Util-dbg.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Util.js",
+			"size": 10727,
+			"isDebug": true,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "util/Util.js",
+			"module": "i2d/eam/pmnotification/create/s1/util/Util.js",
+			"size": 4177,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/util/Constants.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "version.json",
+			"size": 362
+		},
+		{
+			"name": "view/App.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/App.view.xml",
+			"size": 459,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/App.controller.js",
+				"sap/m/App.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/NotFound.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/NotFound.view.xml",
+			"size": 485,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.controller.js",
+				"sap/m/Link.js",
+				"sap/m/MessagePage.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/ObjectNotFound.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/ObjectNotFound.view.xml",
+			"size": 502,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/BaseController.controller.js",
+				"sap/m/Link.js",
+				"sap/m/MessagePage.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/S0.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/S0.view.xml",
+			"size": 6991,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/S0.controller.js",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/FlexItemData.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/ui/comp/navpopover/SemanticObjectController.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smartfilterbar/SmartFilterBar.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			]
+		},
+		{
+			"name": "view/S1.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/S1.view.xml",
+			"size": 2186,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/S1.controller.js",
+				"i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+				"sap/m/Button.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MainAction.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			]
+		},
+		{
+			"name": "view/S2.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/S2.view.xml",
+			"size": 1893,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/S2.controller.js",
+				"i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+				"sap/m/Button.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MainAction.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/S3.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/S3.view.xml",
+			"size": 11368,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/S3.controller.js",
+				"i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+				"i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/IconTabBar.js",
+				"sap/m/IconTabFilter.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/m/semantic/FullscreenPage.js",
+				"sap/m/semantic/MessagesIndicator.js",
+				"sap/m/semantic/SendEmailAction.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/HorizontalLayout.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ushell/ui/footerbar/AddBookmarkButton.js"
+			]
+		},
+		{
+			"name": "view/fragments/Attachments.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/Attachments.fragment.xml",
+			"size": 330,
+			"required": [
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/fragments/CurrentNotifications.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/CurrentNotifications.fragment.xml",
+			"size": 2376,
+			"required": [
+				"sap/m/List.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/fragments/EmployeeQuickView.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/EmployeeQuickView.fragment.xml",
+			"size": 1407,
+			"required": [
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/fragments/GeoMap.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/GeoMap.fragment.xml",
+			"size": 1328,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/view/subview/GeoMap.view.xml",
+				"sap/m/Page.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/fragments/NotificationHeader.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/NotificationHeader.fragment.xml",
+			"size": 1487,
+			"required": [
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/fragments/Search.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/Search.fragment.xml",
+			"size": 796,
+			"required": [
+				"sap/m/ActionSheet.js",
+				"sap/m/Button.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/fragments/TechnicalObjectOverview.fragment.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/fragments/TechnicalObjectOverview.fragment.xml",
+			"size": 5989,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/view/subview/TechnicalObjectOverviewAttachments.view.xml",
+				"sap/m/Label.js",
+				"sap/m/ObjectHeader.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/Text.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/subview/GeoMap.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/subview/GeoMap.view.xml",
+			"size": 1926,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/GeoMap.controller.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/HorizontalLayout.js"
+			]
+		},
+		{
+			"name": "view/subview/LinksForTechnicalObject.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+			"size": 947,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/LinksForTechnicalObject.controller.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/HorizontalLayout.js"
+			]
+		},
+		{
+			"name": "view/subview/MaintainNotification.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/subview/MaintainNotification.view.xml",
+			"size": 14813,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/MaintainNotification.controller.js",
+				"i2d/eam/pmnotification/create/s1/util/ExpandableTextArea.js",
+				"i2d/eam/pmnotification/create/s1/view/subview/LinksForTechnicalObject.view.xml",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/EAMValueHelp.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/SingleKeyInput.js",
+				"sap/i2d/eam/lib/pmnotification/s1/controls/TechnicalObjectInput.js",
+				"sap/m/CheckBox.js",
+				"sap/m/ComboBox.js",
+				"sap/m/DateTimePicker.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/Select.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/ExtensionPoint.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/FixFlex.js",
+				"sap/ui/layout/GridData.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/subview/TechnicalObjectOverviewAttachments.view.xml",
+			"module": "i2d/eam/pmnotification/create/s1/view/subview/TechnicalObjectOverviewAttachments.view.xml",
+			"size": 986,
+			"required": [
+				"i2d/eam/pmnotification/create/s1/controller/TechnicalObjectOverviewAttachments.controller.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectListItem.js",
+				"sap/m/Text.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/ResponsiveFlowLayout.js"
+			]
+		}
+	]
+}

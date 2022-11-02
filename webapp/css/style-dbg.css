@@ -1,0 +1,10 @@
+/* see 
+https://wiki.wdf.sap.corp/wiki/display/ERPFINDEV/sFIN+UX+Fiori+Guidelines#sFINUXFioriGuidelines-FioriListReportFloorplan
+https://wiki.wdf.sap.corp/wiki/display/ERPFINDEV/sFIN+UX+Information+Rollout#sFINUXInformationRollout-23.06.2015-ActionRequiredforApplicationsusingthesap.ui.table.*controls 
+*/
+.sapUiMedia-Std-Desktop .finCentralListreportReuse .sapFioriListReportSmartTable { padding: 1rem 2rem; }
+.sapUiMedia-Std-Tablet  .finCentralListreportReuse .sapFioriListReportSmartTable { padding: 1rem; }
+.sapUiMedia-Std-Phone   .finCentralListreportReuse .sapFioriListReportSmartTable { padding: 1rem 0; }
+
+.finCentralListreportReuse .sapFioriListReportPageOverflow .sapMPageScroll { overflow: auto; }
+.finCentralListreportReuse .sapUiTableCtrlEmptyMsg { font-size: 1rem; }

@@ -1,0 +1,13 @@
+{
+  "application": "i2d.eam.pmnotification.create.s1",
+  "version": "9.0.1",
+  "buildNumber": "1",
+  "buildId": "1",
+  "branch": "detached",
+  "revision": "11fd2543cdf3426897fda568b10b73ef9d850b9f",
+  "GitURL": "",
+  "buildStatus": "${env.buildStatus}",
+  "translationComplete": "${env.translationComplete}",
+  "cidi": "${env.cidi}",
+  "cfdCM": "${env.cfdCM}"
+}

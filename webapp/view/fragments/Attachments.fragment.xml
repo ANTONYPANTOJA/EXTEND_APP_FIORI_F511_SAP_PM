@@ -1,0 +1,9 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<FragmentDefinition  xmlns="sap.ui.core">
+        <!-- Container for Attachments -->
+          <ComponentContainer usage="attachmentReuseComponent" ropagateModel="true" id="pmNotifContainerAttachments" />
+</FragmentDefinition>

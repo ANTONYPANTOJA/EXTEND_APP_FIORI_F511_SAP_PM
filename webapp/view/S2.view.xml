@@ -1,0 +1,52 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View controllerName="i2d.eam.pmnotification.create.s1.controller.S2"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:footerbar="sap.ushell.ui.footerbar" 
+	xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:semantic="sap.m.semantic"
+	xmlns:ushell="sap.ushell.ui">
+    
+    <semantic:FullscreenPage id="pmNotifFullScreenPageS2"
+            navButtonPress="onNavBack" 
+            title="{i18n>xtit.editRequest}" 
+            showNavButton="true"
+            busy="{appProperties>/busy}"
+    		busyIndicatorDelay="{appProperties>/delay}">
+		<semantic:content>
+            <core:Fragment fragmentName="i2d.eam.pmnotification.create.s1.view.fragments.NotificationHeader" type="XML" />
+			<!-- Extension Point for customer field enhancements after the notification header in edit-->
+			<core:ExtensionPoint name="extAfterObjectHeader" />			
+			<!-- View edit notification-->
+            <mvc:XMLView 
+                width="100%" 
+                class="editView" 
+                viewName="i2d.eam.pmnotification.create.s1.view.subview.MaintainNotification" 
+                id="pmNotifViewEditNotification" />
+		</semantic:content>
+		
+		<semantic:messagesIndicator>
+			<semantic:MessagesIndicator press="onMessageButtonPressed"/>
+		</semantic:messagesIndicator>
+
+		<semantic:mainAction>
+			<semantic:MainAction press="onSave" text="{i18n>xbut.save}"/>
+		</semantic:mainAction>
+
+		<semantic:customFooterContent>
+            <Button press="onCancel" text="{i18n>xbut.cancel}"/>
+            <Button press="onDeletePressed" text="{i18n>xbut.delete}" />
+		</semantic:customFooterContent> 		
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		
+	</semantic:FullscreenPage>
+</mvc:View>
