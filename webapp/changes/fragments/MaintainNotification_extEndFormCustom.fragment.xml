@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
+<form:Form xmlns:sap.m="sap.m" editable="true" id="form0">
+        <form:formContainers>
+            <form:FormContainer title="Parámetros adicionales:" id="container0" expandable="true">
+                <form:formElements>
+                    <form:FormElement label="{/#NotificationHeader/Priority/@sap:label}" id="element0">
+                        <form:fields>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputpriority" maxLength="1" value="{Priority}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputPriority" showValueHelp="true"/>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputPriorityText" value="{PriorityText}" enabled="false"/>
+                        </form:fields>
+                    </form:FormElement>
+                         <form:FormElement label="{/#NotificationHeader/Zqmgrp/@sap:label}" id="element1">
+                        <form:fields>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmgrp" maxLength="8" value="{Zqmgrp}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputCodif" showValueHelp="true"/>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmcod" value="{Zqmcod}" enabled="false"/>
+                        </form:fields>
+                    </form:FormElement>
+                </form:formElements>
+            </form:FormContainer>
+        </form:formContainers>
+
+        <form:layout>
+            <form:ResponsiveGridLayout id="layout0"/>
+        </form:layout>
+    </form:Form>
+</core:FragmentDefinition>
