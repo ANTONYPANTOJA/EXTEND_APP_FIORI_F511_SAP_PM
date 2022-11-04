@@ -5,14 +5,16 @@
                 <form:formElements>
                     <form:FormElement label="{/#NotificationHeader/Priority/@sap:label}" id="element0">
                         <form:fields>
-                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputpriority" maxLength="1" value="{Priority}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputPriority" showValueHelp="true"/>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputpriority" maxLength="1" value="{Priority}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputPriority" showValueHelp="true" liveChange=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValidationPriority"/>
                         <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputPriorityText" value="{PriorityText}" enabled="false"/>
+                        <sap.m:Input  id="pmNotifInputPriorityType" visible="false" value="{PriorityType}"/>
                         </form:fields>
                     </form:FormElement>
-                         <form:FormElement label="{/#NotificationHeader/Zqmgrp/@sap:label}" id="element1">
+                         <form:FormElement label="{/#NotificationHeader/Zqmcod/@sap:label}" id="element1">
                         <form:fields>
                         <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmgrp" maxLength="8" value="{Zqmgrp}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputCodif" showValueHelp="true"/>
                         <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmcod" value="{Zqmcod}" enabled="false"/>
+                        <sap.m:Label xmlns="sap.m" text="{ZqmcodText}" id="pmNotifLabelTxtZqmcod"/>
                         </form:fields>
                     </form:FormElement>
                 </form:formElements>
