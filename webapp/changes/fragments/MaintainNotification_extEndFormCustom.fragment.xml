@@ -12,7 +12,7 @@
                     </form:FormElement>
                          <form:FormElement label="{/#NotificationHeader/Zqmcod/@sap:label}" id="element1">
                         <form:fields>
-                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmgrp" maxLength="8" value="{Zqmgrp}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputCodif" showValueHelp="true"/>
+                        <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmgrp" maxLength="8" value="{Zqmgrp}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputCodif" showValueHelp="true" liveChange=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValidationGrp"/>
                         <sap.m:Input xmlns="sap.m" width="100%" id="pmNotifInputZqmcod" value="{Zqmcod}" enabled="false"/>
                         <sap.m:Label xmlns="sap.m" text="{ZqmcodText}" id="pmNotifLabelTxtZqmcod"/>
                         </form:fields>

@@ -255,6 +255,38 @@ sap.ui.define([
                     });
                 }
             },
+            onValidationGrp: function(oEvent){
+                var lv_element = oEvent.getSource(); 
+                var qmgrpValue = oEvent.getParameter("value");
+                var lv_check = true;
+                if (typeof qmgrpValue !== 'undefined' ) {
+
+                    
+                this.getView().getModel().read("/NotificationGrpCodigoSet", { 
+                    success: function (data) {
+                            console.log("Ok zmgrp")
+                            console.log(data)
+                            for (let index = 0; index < data.results.length; ++index) {
+                              if (data.results[index].Codegruppe.includes(String(qmgrpValue))) {
+                                lv_check = true; 
+                                break;
+                              }else{
+                                lv_check = false;  
+                              }
+                            }
+                            
+                            if (lv_check === false) {
+                                lv_element.setValueState(sap.ui.core.ValueState.Error);
+                            }else{
+                                lv_element.setValueState(sap.ui.core.ValueState.None);
+                            }
+
+                        },error: function (e) {
+                            console.log(e);
+                        }
+                    });
+                }
+            },
 
 
 

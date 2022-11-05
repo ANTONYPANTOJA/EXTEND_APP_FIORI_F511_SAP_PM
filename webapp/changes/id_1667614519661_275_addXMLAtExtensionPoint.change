@@ -1,0 +1,38 @@
+{
+	"fileName": "id_1667614519661_275_addXMLAtExtensionPoint",
+	"fileType": "change",
+	"changeType": "addXMLAtExtensionPoint",
+	"moduleName": "customer/zeamntfcres1ext/changes/fragments/MaintainNotification_ext_DisplayEndFormCustom.fragment.xml",
+	"reference": "customer.zeamntfcres1ext",
+	"packageName": "$TMP",
+	"content": {
+		"fragmentPath": "fragments/MaintainNotification_ext_DisplayEndFormCustom.fragment.xml"
+	},
+	"selector": {
+		"name": "extAdditionalLocationDataDisplay",
+		"viewSelector": {
+			"id": "display",
+			"idIsLocal": true
+		}
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/customer.zeamntfcres1ext/changes/",
+	"projectId": "customer.zeamntfcres1ext",
+	"creation": "2022-11-05T02:15:20.171Z",
+	"originalLanguage": "ES",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.90.6",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1667614519661_276_composite",
+		"command": "addXMLAtExtensionPoint"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}
