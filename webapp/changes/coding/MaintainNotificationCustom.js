@@ -112,12 +112,13 @@ sap.ui.define([
               // SET INPUT TEXT VALUE //
               var inputZqmgrp = this.byId("pmNotifInputZqmgrp");
               inputZqmgrp.setValue(aContexts[0].getObject().Codegruppe);
+              inputZqmgrp.setValueState(sap.ui.core.ValueState.None);
 
               var inputZqmcod = this.byId("pmNotifInputZqmcod");
               inputZqmcod.setValue(aContexts[0].getObject().Code);
 
               var inputTxtZqmcod = this.byId("pmNotifLabelTxtZqmcod");
-              inputTxtZqmcod.setText(aContexts[0].getObject().CodeTxt);
+              inputTxtZqmcod.setValue(aContexts[0].getObject().CodeTxt);
 
                //===================================================================//
               //===================================================================//
@@ -198,6 +199,7 @@ sap.ui.define([
 
                     var inputPriority = this.byId("pmNotifInputpriority");
                     inputPriority.setValue(aContexts[0].getObject().Maintpriority);
+                    inputPriority.setValueState(sap.ui.core.ValueState.None);
 
                     var inputPriorityType = this.byId("pmNotifInputPriorityType");
                     inputPriorityType.setValue(aContexts[0].getObject().Maintprioritytype);

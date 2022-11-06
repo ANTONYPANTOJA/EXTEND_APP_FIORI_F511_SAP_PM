@@ -1,34 +1,21 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc">
-    <form:Form editable="true" id="form0">
-        <form:formContainers>
-           
-            <form:FormContainer id="container0">
-                <form:formElements>
-                     <!-- ==== Prioridad ==== -->
-                    <form:FormElement label="{/#NotificationHeader/Priority/@sap:label}" id="element0">
-                        <form:fields>
-                           <Text xmlns="sap.m" text="{PriorityText}" id="txtPriorityText" class="sapUiSmallMarginBegin"/>
-                        </form:fields>
-                    </form:FormElement>
-                            <!-- ==== Zqmgrp ==== -->
-                    <form:FormElement label="{/#NotificationHeader/Zqmgrp/@sap:label}" id="element1">
-                        <form:fields>
-                           <Text xmlns="sap.m" text="{Zqmgrp}" id="ZqmgrpText" class="sapUiSmallMarginBegin"/>
-                        </form:fields>
-                    </form:FormElement>
-                            <!-- ==== Zqmcod ==== -->
-                    <form:FormElement label="{/#NotificationHeader/Zqmcod/@sap:label}" id="element2">
-                        <form:fields>
-                           <Text xmlns="sap.m" text="{Zqmcod}" id="ZqmcodText" class="sapUiSmallMarginBegin"/>
-                           <Text xmlns="sap.m" text="{ZqmcodText}" id="ZqmcodText2" class="sapUiSmallMarginBegin"/>
-                        </form:fields>
-                    </form:FormElement>
-                </form:formElements>
-            </form:FormContainer>
-        </form:formContainers>
 
-        <form:layout>
-            <form:ResponsiveGridLayout id="layout0" />
-        </form:layout>
-    </form:Form>
+  <!-- ==== Priority ==== -->
+<sap.m:Label text="{/#NotificationHeader/Priority/@sap:label}" width="100%" 
+              xmlns:sap.m="sap.m" 
+              labelFor="txtPriorityText"
+              design="Bold"
+              id="label0"/>
+<Text xmlns="sap.m" text="{Priority} - {PriorityText}" id="txtPriorityText" class="sapUiSmallMarginBegin"/>
+
+
+  <!-- ==== Group Codificación ==== -->
+<sap.m:Label text="{/#NotificationHeader/Zqmcod/@sap:label}" width="100%" 
+              xmlns:sap.m="sap.m" 
+              design="Bold"
+              labelFor="ZqmgrpText"
+              id="label1"/>
+              
+<Text xmlns="sap.m" text="{Zqmgrp} - {Zqmcod} - {ZqmcodText}" id="ZqmgrpText" class="sapUiSmallMarginBegin"/>
+
 </core:FragmentDefinition>
