@@ -12,9 +12,11 @@ sap.ui.define([
     'sap/ui/core/mvc/ControllerExtension',
     'sap/ui/core/mvc/OverrideExecution',
     'sap/ui/core/mvc/Controller',
-    'sap/ui/model/json/JSONModel'
+    'sap/ui/model/json/JSONModel',
+    'sap/ui/model/Filter',
+	'sap/ui/model/FilterOperator'
 ],
-    function (ControllerExtension, OverrideExecution, Controller, JSONModel) {
+    function (ControllerExtension, OverrideExecution, Controller, JSONModel,Filter,FilterOperator) {
         "use strict";
         return ControllerExtension.extend("customer.zeamntfcres1ext.MaintainNotificationCustom", {
             metadata: {
@@ -88,8 +90,9 @@ sap.ui.define([
         handleSearchGrp: function(oEvent){
 
             var sValue = oEvent.getParameter("value");
-            var oFilter = sap.ui.model.Filter("CodegruppeTxt", sap.ui.model.FilterOperator.EQ, sValue);
-            oEvent.getSource().getBinding("items").filter([oFilter]);
+            var oFilter = new Filter("CodeTxt", FilterOperator.Contains, sValue);
+            var oBinding2 = oEvent.getSource().getBinding("items");
+            oBinding2.filter([oFilter]);
         },
         //confirm=".handleCloseGrp" - grupo de Códigos Help 
         handleCloseGrp: function(oEvent){
@@ -166,9 +169,11 @@ sap.ui.define([
                 var sValue = oEvent.getParameter("value");
                 //var oFilter = new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
 
-                var oFilter = sap.ui.model.Filter("Maintprioritydesc", sap.ui.model.FilterOperator.EQ, sValue);
+                var oFilter =  new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
+                var oBinding = oEvent.getSource().getBinding("items");
+                oBinding.filter([oFilter]);
 
-                oEvent.getSource().getBinding("items").filter([oFilter]);
+                //oEvent.getSource().getBinding("items").filter([oFilter]);
             }, handleClose: function (oEvent) {
 
                 // reset the filter
