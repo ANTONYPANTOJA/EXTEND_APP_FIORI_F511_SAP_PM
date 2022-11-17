@@ -43,6 +43,7 @@ sap.ui.define([
                 }
             },
             onValueHelpInputPriority: function (oEvent) {
+    
                 var oButton = oEvent.getSource(),
                     oView = this.getView();
 
@@ -59,7 +60,15 @@ sap.ui.define([
 
                 this._pDialog.then(function (oDialog) {
                     this._configDialog(oButton, oDialog);
+                    // filterthelistviabinding +add ====================================================//
+                    var oFilterAux =  new Filter("Maintprioritytype", FilterOperator.Contains, 'ZM' );
+                    var oList = this.getView().byId("myDialog");
+                    var oBinding = oList.getBinding("items");
+                    oBinding.filter(oFilterAux);
+                    //================================================================================//
+                    
                     oDialog.open();
+
                 }.bind(this));
 
             },
@@ -170,9 +179,19 @@ sap.ui.define([
                 //var oFilter = new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
 
                 var oFilter =  new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
-                var oBinding = oEvent.getSource().getBinding("items");
-                oBinding.filter([oFilter]);
 
+                //Nuevo Filtrado de los datos
+                var aFilters = [ 
+                                  new sap.ui.model.Filter("Maintprioritydesc", FilterOperator.EQ, sValue),
+                                  new sap.ui.model.Filter("Maintprioritytype", FilterOperator.EQ, "ZM")  
+                ];
+                //var oFilter = new sap.ui.model.Filter({ filters : aFilters,
+                //                                        and     : true });
+
+                var oBinding = oEvent.getSource().getBinding("items");
+                //oBinding.filter([oFilter]);
+                oBinding.filter([aFilters]); //new
+                
                 //oEvent.getSource().getBinding("items").filter([oFilter]);
             }, handleClose: function (oEvent) {
 
@@ -224,6 +243,7 @@ sap.ui.define([
                     //===================================================================//
                     var objectMain = oEvent.getSource().getBindingContext().getObject();
                 }
+                
 
             },
             onValidationPriority:function(oEvent){

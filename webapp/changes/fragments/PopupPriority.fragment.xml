@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-    <TableSelectDialog id="myDialog" 
+  <TableSelectDialog id="myDialog" 
                        noDataText="No se ha encontrado datos" 
                        title="Seleccione Prioridad" 
                        search=".handleSearch" 
