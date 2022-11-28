@@ -14,9 +14,9 @@ sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
     'sap/ui/model/Filter',
-	'sap/ui/model/FilterOperator'
+    'sap/ui/model/FilterOperator'
 ],
-    function (ControllerExtension, OverrideExecution, Controller, JSONModel,Filter,FilterOperator) {
+    function (ControllerExtension, OverrideExecution, Controller, JSONModel, Filter, FilterOperator) {
         "use strict";
         return ControllerExtension.extend("customer.zeamntfcres1ext.MaintainNotificationCustom", {
             metadata: {
@@ -43,7 +43,7 @@ sap.ui.define([
                 }
             },
             onValueHelpInputPriority: function (oEvent) {
-    
+
                 var oButton = oEvent.getSource(),
                     oView = this.getView();
 
@@ -61,12 +61,12 @@ sap.ui.define([
                 this._pDialog.then(function (oDialog) {
                     this._configDialog(oButton, oDialog);
                     // filterthelistviabinding +add ====================================================//
-                    var oFilterAux =  new Filter("Maintprioritytype", FilterOperator.Contains, 'ZM' );
+                    var oFilterAux = new Filter("Maintprioritytype", FilterOperator.Contains, 'ZM');
                     var oList = this.getView().byId("myDialog");
                     var oBinding = oList.getBinding("items");
                     oBinding.filter(oFilterAux);
                     //================================================================================//
-                    
+
                     oDialog.open();
 
                 }.bind(this));
@@ -95,49 +95,49 @@ sap.ui.define([
 
             },
 
-        //search=".handleSearchGrp" - grupo de Códigos Help
-        handleSearchGrp: function(oEvent){
+            //search=".handleSearchGrp" - grupo de Códigos Help
+            handleSearchGrp: function (oEvent) {
 
-            var sValue = oEvent.getParameter("value");
-            var oFilter = new Filter("CodeTxt", FilterOperator.Contains, sValue);
-            var oBinding2 = oEvent.getSource().getBinding("items");
-            oBinding2.filter([oFilter]);
-        },
-        //confirm=".handleCloseGrp" - grupo de Códigos Help 
-        handleCloseGrp: function(oEvent){
+                var sValue = oEvent.getParameter("value");
+                var oFilter = new Filter("CodeTxt", FilterOperator.Contains, sValue);
+                var oBinding2 = oEvent.getSource().getBinding("items");
+                oBinding2.filter([oFilter]);
+            },
+            //confirm=".handleCloseGrp" - grupo de Códigos Help 
+            handleCloseGrp: function (oEvent) {
 
-          // reset the filter
-          var oBinding = oEvent.getSource().getBinding("items");
-          oBinding.filter([]);
+                // reset the filter
+                var oBinding = oEvent.getSource().getBinding("items");
+                oBinding.filter([]);
 
-          //===================================================================//
-          //Traer el objeto Press Item o Click
-          const aContexts = oEvent.getParameter("selectedContexts")
+                //===================================================================//
+                //Traer el objeto Press Item o Click
+                const aContexts = oEvent.getParameter("selectedContexts")
 
-          if (aContexts && aContexts.length) {
+                if (aContexts && aContexts.length) {
 
-              var oSelectedItem = oEvent.getSource();
-              var oContext = oSelectedItem.getBindingContext();
-              var sPath = oContext.getPath();
+                    var oSelectedItem = oEvent.getSource();
+                    var oContext = oSelectedItem.getBindingContext();
+                    var sPath = oContext.getPath();
 
-              
-              // SET INPUT TEXT VALUE //
-              var inputZqmgrp = this.byId("pmNotifInputZqmgrp");
-              inputZqmgrp.setValue(aContexts[0].getObject().Codegruppe);
-              inputZqmgrp.setValueState(sap.ui.core.ValueState.None);
 
-              var inputZqmcod = this.byId("pmNotifInputZqmcod");
-              inputZqmcod.setValue(aContexts[0].getObject().Code);
+                    // SET INPUT TEXT VALUE //
+                    var inputZqmgrp = this.byId("pmNotifInputZqmgrp");
+                    inputZqmgrp.setValue(aContexts[0].getObject().Codegruppe);
+                    inputZqmgrp.setValueState(sap.ui.core.ValueState.None);
 
-              var inputTxtZqmcod = this.byId("pmNotifLabelTxtZqmcod");
-              inputTxtZqmcod.setValue(aContexts[0].getObject().CodeTxt);
+                    var inputZqmcod = this.byId("pmNotifInputZqmcod");
+                    inputZqmcod.setValue(aContexts[0].getObject().Code);
 
-               //===================================================================//
-              //===================================================================//
-              var objectMain_aux = oEvent.getSource().getBindingContext().getObject();
+                    var inputTxtZqmcod = this.byId("pmNotifLabelTxtZqmcod");
+                    inputTxtZqmcod.setValue(aContexts[0].getObject().CodeTxt);
 
-        }
-    },
+                    //===================================================================//
+                    //===================================================================//
+                    var objectMain_aux = oEvent.getSource().getBindingContext().getObject();
+
+                }
+            },
 
             _configDialog: function (oButton, oDialog) {
                 // Set draggable property
@@ -174,7 +174,9 @@ sap.ui.define([
             },
 
             handleSearch: function (oEvent) {
-
+                /**
+                 
+               
                 var sValue = oEvent.getParameter("value");
                 //var oFilter = new Filter("Maintprioritydesc", FilterOperator.Contains, sValue);
 
@@ -193,6 +195,8 @@ sap.ui.define([
                 oBinding.filter([aFilters]); //new
                 
                 //oEvent.getSource().getBinding("items").filter([oFilter]);
+                  */
+
             }, handleClose: function (oEvent) {
 
                 // reset the filter
@@ -243,81 +247,104 @@ sap.ui.define([
                     //===================================================================//
                     var objectMain = oEvent.getSource().getBindingContext().getObject();
                 }
-                
+
 
             },
-            onValidationPriority:function(oEvent){
+            onValidationPriority: function (oEvent) {
                 console.log('validate change');
-                
+
                 var priorityValue = oEvent.getParameter("value");
-                if (typeof priorityValue !== 'undefined' ) {
+                if (typeof priorityValue !== 'undefined') {
 
-                    //this._oNotifTypeControl = this.getView().byId("pmNotifInputpriority");
-                    //this._oNotifTypeControl.setBusy(true);
-                    //this._oNotifTypeControl.getModel().read("/NotificationPrioritySet(Maintpriority='" + priorityValue + "')", {
-                    var lv_check = true;
-                    var lv_element = oEvent.getSource(); 
-                    this.getView().getModel().read("/NotificationPrioritySet", { 
-                    success: function (data) {
-                            console.log("Ok prioridad")
-                            console.log(data)
-                            for (let index = 0; index < data.results.length; ++index) {
-                              if (data.results[index].Maintpriority.includes(String(priorityValue))) {
-                                lv_check = true; 
-                                break;
-                              }else{
-                                lv_check = false;  
-                              }
-                            }
-                            
-                            if (lv_check === false) {
-                                lv_element.setValueState(sap.ui.core.ValueState.Error);
-                            }else{
-                                lv_element.setValueState(sap.ui.core.ValueState.None);
-                            }
+                    if (priorityValue !== '') {
 
-                        },error: function (e) {
-                            console.log(e);
-                        }
-                    });
+
+
+                        //this._oNotifTypeControl = this.getView().byId("pmNotifInputpriority");
+                        //this._oNotifTypeControl.setBusy(true);
+                        //this._oNotifTypeControl.getModel().read("/NotificationPrioritySet(Maintpriority='" + priorityValue + "')", {
+                        var lv_check = true;
+                        var lv_element = oEvent.getSource();
+                        this.getView().getModel().read("/NotificationPrioritySet", {
+                            success: function (data) {
+                                console.log("Ok prioridad")
+                                console.log(data)
+                                for (let index = 0; index < data.results.length; ++index) {
+                                    if (data.results[index].Maintpriority.includes(String(priorityValue))) {
+                                        lv_check = true;
+                                        break;
+                                    } else {
+                                        lv_check = false;
+                                    }
+                                }
+
+                                if (lv_check === false) {
+                                    lv_element.setValueState(sap.ui.core.ValueState.Error);
+                                } else {
+                                    lv_element.setValueState(sap.ui.core.ValueState.None);
+                                }
+
+                            }, error: function (e) {
+                                console.log(e);
+                            }
+                        });
+
+                    } else {
+                        let lv_element2 = oEvent.getSource();
+                        lv_element2.setValueState(sap.ui.core.ValueState.Error);
+                    }
+
+                } else {
+                    let lv_element2 = oEvent.getSource();
+                    lv_element2.setValueState(sap.ui.core.ValueState.Error);
                 }
+
+
             },
-            onValidationGrp: function(oEvent){
-                var lv_element = oEvent.getSource(); 
+            onValidationGrp: function (oEvent) {
+                var lv_element = oEvent.getSource();
                 var qmgrpValue = oEvent.getParameter("value");
                 var lv_check = true;
-                if (typeof qmgrpValue !== 'undefined' ) {
+                if (typeof qmgrpValue !== 'undefined') {
 
-                    
-                this.getView().getModel().read("/NotificationGrpCodigoSet", { 
-                    success: function (data) {
-                            console.log("Ok zmgrp")
-                            console.log(data)
-                            for (let index = 0; index < data.results.length; ++index) {
-                              if (data.results[index].Codegruppe.includes(String(qmgrpValue))) {
-                                lv_check = true; 
-                                break;
-                              }else{
-                                lv_check = false;  
-                              }
-                            }
-                            
-                            if (lv_check === false) {
-                                lv_element.setValueState(sap.ui.core.ValueState.Error);
-                            }else{
-                                lv_element.setValueState(sap.ui.core.ValueState.None);
-                            }
+                    if (qmgrpValue !== '') {
 
-                        },error: function (e) {
-                            console.log(e);
-                        }
-                    });
+
+                        this.getView().getModel().read("/NotificationGrpCodigoSet", {
+                            success: function (data) {
+                                console.log("Ok zmgrp")
+                                console.log(data)
+                                for (let index = 0; index < data.results.length; ++index) {
+                                    //if (data.results[index].Codegruppe.includes(String(qmgrpValue))) {
+                                    if (data.results[index].Codegruppe === qmgrpValue) {
+                                        lv_check = true;
+                                        break;
+                                    } else {
+                                        lv_check = false;
+                                    }
+                                }
+
+                                if (lv_check === false) {
+                                    lv_element.setValueState(sap.ui.core.ValueState.Error);
+                                } else {
+                                    lv_element.setValueState(sap.ui.core.ValueState.None);
+                                }
+
+                            }, error: function (e) {
+                                console.log(e);
+                            }
+                        });
+
+                    } else {
+                        let lv_element2 = oEvent.getSource();
+                        lv_element2.setValueState(sap.ui.core.ValueState.Error);
+                    }
+
+                } else {
+                    let lv_element2 = oEvent.getSource();
+                    lv_element2.setValueState(sap.ui.core.ValueState.Error);
                 }
             },
-
-
-
-            // // adding a private method, only accessible from this controller extension
             // _privateMethod: function() {},
             // // adding a public method, might be called from or overridden by other controller extensions as well
             // publicMethod: function() {},
@@ -336,27 +363,52 @@ sap.ui.define([
                 // 	 * @memberOf customer.zeamntfcres1ext.MaintainNotificationCustom
                 // 	 */
                 //
-                //onInit: function () {
-                //    alert("onInit of extension");
-                //},
+                onInit: function () {
+                    // alert("onInit of extension");
+                    // sap.ui.getCore().attachParseError(this._parseErrorHandler, this);
+                    // sap.ui.getCore().attachValidationSuccess(this._onValidationSuccess, this);
+
+                    //document.getElementById("pmNotifInputpriority").required = true;
+                    //this._oControl = this.byId("pmNotifInputpriority");
+                    //this._oControl.attachParseError(this._parseErrorHandler, this);
+                    // this._oControl.attachvalidationSuccess(this._onValidationSuccess, this);
+                },
 
                 // 	/**
                 // 	 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
                 // 	 * (NOT before the first rendering! onInit() is used for that one!).
                 // 	 * @memberOf customer.zeamntfcres1ext.MaintainNotificationCustom
                 // 	 */
-                //onBeforeRendering: function () {
-                //    alert("onBeforeRendering of extension");
-                //},
+                onBeforeRendering: function () {
+                    //   alert("onBeforeRendering of extension");
+                },
 
                 // 	/**
                 // 	 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
                 // 	 * This hook is the same one that SAPUI5 controls get after being rendered.
                 // 	 * @memberOf customer.zeamntfcres1ext.MaintainNotificationCustom
                 // 	 */
-                //onAfterRendering: function () {
-                //    alert("onAfterRendering of extension");
-                //},
+                onAfterRendering: function () {
+                    var inputPriority = this.byId("pmNotifInputpriority");
+                    //Validar
+                    var lv_inputPriority = inputPriority.getValue("value")
+                    if (lv_inputPriority === '' || typeof qmgrpValue !== 'undefined') {
+                        inputPriority.setValueState(sap.ui.core.ValueState.Error);
+                    } else {
+                        inputPriority.setValueState(sap.ui.core.ValueState.None);
+                    }
+
+
+                    var inputZqmgrp2 = this.byId("pmNotifInputZqmgrp");
+                    
+                    //Validar
+                    var lv_inputZqmgrp2 = inputZqmgrp2.getValue("value")
+                    if (lv_inputZqmgrp2 === '' || typeof qmgrpValue !== 'undefined') {
+                        inputZqmgrp2.setValueState(sap.ui.core.ValueState.Error);
+                    } else {
+                        inputZqmgrp2.setValueState(sap.ui.core.ValueState.None);
+                    }
+                },
 
                 // 	/**
                 // 	 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.

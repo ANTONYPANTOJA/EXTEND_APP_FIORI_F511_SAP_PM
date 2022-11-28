@@ -3,11 +3,11 @@
   <!-- ==== Priority ==== -->
 <sap.m:Label text="{/#NotificationHeader/Priority/@sap:label}" width="100%" 
               xmlns:sap.m="sap.m" 
+              required="true"
               labelFor="pmNotifInputPriority"
-              design="Bold"
               id="label0"/>
 
-<Input xmlns="sap.m" value="{Priority}" id="pmNotifInputpriority" width="20%" maxLength="1" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputPriority" showValueHelp="true" liveChange=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValidationPriority"/>
+<Input xmlns="sap.m" value="{Priority}" id="pmNotifInputpriority" width="20%" maxLength="1" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputPriority" showValueHelp="true" liveChange=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValidationPriority" />
 
 
   <!-- ==== Priority ==== -->
@@ -33,8 +33,8 @@
   <!-- ==== Group Codificación ==== -->
 <sap.m:Label text="{/#NotificationHeader/Zqmcod/@sap:label}" width="100%" 
               xmlns:sap.m="sap.m" 
+              required="true"
               labelFor="pmNotifInputZqmgrp"
-              design="Bold"
               id="label3"/>
 
 <Input xmlns="sap.m" id="pmNotifInputZqmgrp" width="40%" maxLength="8" value="{Zqmgrp}" valueHelpRequest=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValueHelpInputCodif" showValueHelp="true" liveChange=".extension.customer.zeamntfcres1ext.MaintainNotificationCustom.onValidationGrp"/>
