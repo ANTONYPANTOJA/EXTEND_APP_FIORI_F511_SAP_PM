@@ -6,8 +6,8 @@
               labelFor="txtPriorityText"
               design="Bold"
               id="label0"/>
-<Text xmlns="sap.m" text="{Priority} - {PriorityText}" id="txtPriorityText" class="sapUiSmallMarginBegin"/>
-
+<Text xmlns="sap.m" text="{= ${Priority} !== '' ? ${Priority} + ' - ' +  ${PriorityText} : '' }" id="txtPriorityText" class="sapUiSmallMarginBegin"/>
+<!-- {Priority} - {PriorityText} -->
 
   <!-- ==== Group Codificación ==== -->
 <sap.m:Label text="{/#NotificationHeader/Zqmcod/@sap:label}" width="100%" 
@@ -16,6 +16,6 @@
               labelFor="ZqmgrpText"
               id="label1"/>
               
-<Text xmlns="sap.m" text="{Zqmgrp} - {Zqmcod} - {ZqmcodText}" id="ZqmgrpText" class="sapUiSmallMarginBegin"/>
-
+<Text xmlns="sap.m" text="{= ${Zqmgrp} !== '' ? ${Zqmgrp} + ' - ' +  ${Zqmcod} + ' - ' + ${ZqmcodText} : '' }" id="ZqmgrpText" class="sapUiSmallMarginBegin"/>
+<!-- {Zqmgrp} - {Zqmcod} - {ZqmcodText} -->
 </core:FragmentDefinition>
